@@ -106,9 +106,8 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* CTA Button */}
         <div className="hidden lg:block">
-          <Link to="/book">
+          <a href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
             <Button
               style={{
                 background: "#e5745a",
@@ -132,7 +131,7 @@ export function Navbar() {
             >
               Book a Test
             </Button>
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -185,7 +184,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link to="/book" onClick={() => setMobileOpen(false)}>
+          <a href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} style={{ textDecoration: "none" }}>
             <Button
               style={{
                 background: "#e5745a",
@@ -204,7 +203,7 @@ export function Navbar() {
             >
               Book a Test
             </Button>
-          </Link>
+          </a>
         </div>
       )}
     </nav>

@@ -268,8 +268,10 @@ export default function Services() {
                         >
                           {formatPrice(test.price)}
                         </p>
-                        <Link
-                          to={`/book`}
+                        <a
+                          href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           style={{
                             fontFamily: "var(--font-body)",
                             fontSize: 12,
@@ -279,7 +281,7 @@ export default function Services() {
                           }}
                         >
                           Book →
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   ))}

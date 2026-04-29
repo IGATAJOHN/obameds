@@ -178,7 +178,7 @@ export default function Home() {
               flexWrap: "wrap",
             }}
           >
-            <Link to="/book">
+            <a href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
               <Button
                 style={{
                   background: "#e5745a",
@@ -202,7 +202,7 @@ export default function Home() {
               >
                 Book a Test
               </Button>
-            </Link>
+            </a>
             <Link to="/services">
               <Button
                 variant="outline"
@@ -707,7 +707,7 @@ export default function Home() {
               >
                 Book online in minutes and get fast, accurate results.
               </p>
-              <Link to="/book">
+              <a href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
                 <Button
                   style={{
                     background: "#e5745a",
@@ -731,7 +731,7 @@ export default function Home() {
                 >
                   Book a Test Now
                 </Button>
-              </Link>
+              </a>
             </div>
           </ScrollSection>
         </div>

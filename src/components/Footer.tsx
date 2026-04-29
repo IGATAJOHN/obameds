@@ -113,24 +113,43 @@ export function Footer() {
               {[
                 { label: "Services", href: "/services" },
                 { label: "About Us", href: "/about" },
-                { label: "Book a Test", href: "/book" },
+                { label: "Book a Test", href: "https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" },
                 { label: "FAQ", href: "/faq" },
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="link-underline"
-                  style={{
-                    color: "rgba(255,255,255,0.7)",
-                    fontSize: 14,
-                    textDecoration: "none",
-                    fontFamily: "var(--font-body)",
-                    transition: "color 300ms",
-                  }}
-                >
-                  {link.label}
-                </Link>
+                link.href.startsWith("http") ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline"
+                    style={{
+                      color: "rgba(255,255,255,0.7)",
+                      fontSize: 14,
+                      textDecoration: "none",
+                      fontFamily: "var(--font-body)",
+                      transition: "color 300ms",
+                    }}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="link-underline"
+                    style={{
+                      color: "rgba(255,255,255,0.7)",
+                      fontSize: 14,
+                      textDecoration: "none",
+                      fontFamily: "var(--font-body)",
+                      transition: "color 300ms",
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </div>
           </div>
