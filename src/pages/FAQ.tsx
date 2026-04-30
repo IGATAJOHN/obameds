@@ -27,54 +27,54 @@ function ScrollSection({
 
 const faqs = [
   {
-    question: "How do I book a test?",
+    question: "What is Intelligensys & Strategies?",
     answer:
-      "You can book a test online through our website by visiting the 'Book a Test' page. Simply browse our test catalog, select your preferred test, fill in your details, and choose between visiting our lab or home sample collection. You can also book via WhatsApp or by calling us directly.",
+      "Intelligensys & Strategies is a high-performance technology and strategic services firm established in 2006 as Quorum Technologies. We provide advanced intelligence frameworks and data-driven systems required to support Nigeria's strategic objectives and economic stability, serving government institutions and private-sector leaders.",
   },
   {
-    question: "How long does it take to get results?",
+    question: "Who are your primary clients?",
     answer:
-      "Turnaround times vary by test type. Most routine blood tests are available within 24 hours. Specialized tests like hormonal assays and genetic testing may take 48 hours to 2 weeks. You'll receive an estimated turnaround time when booking your test.",
+      "We serve government institutions, security agencies, and private-sector leaders who require specialized technical clarity. Our partners span across critical infrastructure operators, financial regulators, trade bodies, and institutions focused on national and economic security.",
   },
   {
-    question: "Do you offer home sample collection?",
+    question: "What are your five service dimensions?",
     answer:
-      "Yes! We offer home sample collection services across Abuja and select areas. Simply select 'Home Collection' when booking your test, and our trained phlebotomist will visit your location at your preferred time slot.",
+      "Our five service dimensions are: (1) Cyber & Technical Security Services — covering cybersecurity for critical infrastructure and AI auditing; (2) Economic & Financial Integrity Services — neutralizing illicit financial flows; (3) Trade & Border Facilitation Services — enabling secure trade corridors; (4) Resource & Food Sustainability Services — GEOINT-powered monitoring; and (5) Societal & Human Stability Services — strengthening institutional integrity and cultural security.",
   },
   {
-    question: "How should I prepare for my blood test?",
+    question: "How does Intelligensys approach Cybersecurity?",
     answer:
-      "Preparation depends on the specific test. For fasting blood glucose and lipid profiles, you'll need to fast for 8-12 hours (water is allowed). For most other tests, no special preparation is needed. We'll provide detailed instructions when you book your test.",
+      "We focus on Science and Technology Security, providing cybersecurity frameworks for critical national infrastructure and conducting rigorous audits of AI systems. Our goal is to ensure Nigeria's digital frontier remains a secure platform for innovation by identifying vulnerabilities before they become threats.",
   },
   {
-    question: "Are your results accurate?",
+    question: "What is Geospatial Intelligence (GEOINT) and how do you use it?",
     answer:
-      "Absolutely. We use state-of-the-art equipment and follow strict quality control protocols. Our laboratory is fully accredited and our results are trusted by leading hospitals and healthcare providers across Nigeria.",
+      "Geospatial Intelligence (GEOINT) is the analysis and visual representation of security-relevant activities on the Earth's surface. We leverage GEOINT to provide high-level monitoring for Food Security, Resource Security, and Ecological Security — helping our partners protect agricultural hubs and mineral extraction sites through advanced data modeling and risk assessment.",
   },
   {
-    question: "How do I receive my test results?",
+    question: "How do you support Economic and Financial Security?",
     answer:
-      "Your results will be sent to you via email and SMS. You can also access them through our patient portal. For sensitive results, we recommend scheduling a follow-up consultation with one of our doctors.",
+      "We deliver specialized frameworks designed to neutralize illicit financial flows and disrupt organized crime networks. By helping to create environments of financial integrity, we foster conditions where legitimate investment and prosperity can thrive — supporting both regulatory bodies and private institutions.",
   },
   {
-    question: "What are your operating hours?",
+    question: "What is the 'Intelligensys Advantage'?",
     answer:
-      "Our laboratory is open Monday through Saturday from 7:00 AM to 6:00 PM. Home sample collection is available from 8:00 AM to 5:00 PM, Monday through Saturday.",
+      "The Intelligensys Advantage is our core philosophy: we don't just analyze the landscape — we provide the specialized services to master it. By fusing Data Science with National Security Strategy, we serve as a technical vanguard, empowering partners to achieve multi-dimensional stability and long-term success rather than reactive, single-point solutions.",
   },
   {
-    question: "Do you accept health insurance?",
+    question: "How was Intelligensys & Strategies founded?",
     answer:
-      "Yes, we work with most major health insurance providers in Nigeria. Please bring your insurance card and a valid ID when visiting our lab. Contact us to confirm if your specific provider is covered.",
+      "Intelligensys & Strategies was established in 2006 as Quorum Technologies. Over nearly two decades, we have built a legacy of transforming complex security variables into actionable strategic services, evolving our capabilities to meet the multi-dimensional challenges of the modern era.",
   },
   {
-    question: "Can I cancel or reschedule my appointment?",
+    question: "How do I initiate a partnership with Intelligensys?",
     answer:
-      "Yes, you can cancel or reschedule your appointment up to 24 hours before your scheduled time at no charge. Please contact us via phone or WhatsApp to make changes.",
+      "You can reach us through the Contact page on our website, via email at info@intelligensys.ng, or through WhatsApp. Our team will engage you to understand your strategic objectives and propose a tailored service framework aligned to your specific needs.",
   },
   {
-    question: "Where are your lab locations?",
+    question: "Is Intelligensys focused solely on Nigeria?",
     answer:
-      "We currently have two locations in Abuja: Plot 42, Lugbe Expressway, Federal Housing Estate, Lugbe, and Suite 15, Jabi Lake Mall, Jabi District. Both locations offer full diagnostic services.",
+      "While our primary mandate is to support Nigeria's strategic objectives and economic stability, our intelligence frameworks — particularly in Trade & Border Facilitation and Geospatial Intelligence — have regional and transnational dimensions, addressing cross-border threats and global commerce networks that affect Nigeria's security landscape.",
   },
 ];
 
@@ -180,8 +180,8 @@ export default function FAQ() {
               lineHeight: 1.7,
             }}
           >
-            Find answers to common questions about our services, booking process,
-            and test preparation.
+            Find answers to common questions about our firm, our service dimensions,
+            and how to engage us as a strategic partner.
           </p>
         </div>
       </div>
