@@ -1,9 +1,11 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
-  Clock,
-  Shield,
-  Microscope,
-  Heart,
+  ShieldAlert,
+  Landmark,
+  Globe,
+  Leaf,
+  Users,
+  Target,
 } from "lucide-react";
 
 function ScrollSection({
@@ -29,30 +31,36 @@ function ScrollSection({
   );
 }
 
-const values = [
+const services = [
   {
-    icon: <Shield size={28} color="#1a9988" />,
-    title: "Integrity",
+    icon: <ShieldAlert size={28} color="#1a9988" />,
+    title: "Cyber & Technical Security Services",
     description:
-      "We uphold the highest ethical standards in all our operations, ensuring honest and transparent service delivery.",
+      "We provide specialized services for Science and Technology Security. Our focus includes Cybersecurity for critical infrastructure and the rigorous auditing of AI systems, ensuring that Nigeria’s digital frontier remains a secure platform for innovation.",
   },
   {
-    icon: <Microscope size={28} color="#e5745a" />,
-    title: "Precision",
+    icon: <Landmark size={28} color="#e5745a" />,
+    title: "Economic & Financial Integrity Services",
     description:
-      "Accuracy is at the core of everything we do. Our advanced equipment and meticulous processes ensure reliable results.",
+      "We deliver the frameworks required to enhance Financial Security and Economic Security. By offering services that neutralize illicit financial flows and organized crime, we help foster an environment where prosperity and investment can thrive.",
   },
   {
-    icon: <Heart size={28} color="#4f8298" />,
-    title: "Compassion",
+    icon: <Globe size={28} color="#4f8298" />,
+    title: "Trade & Border Facilitation Services",
     description:
-      "We understand that medical testing can be stressful. Our team provides caring, patient-centered service.",
+      "We design the systems that underpin Border Security. Our services focus on the technological enablement of secure trade corridors, ensuring that borders function as efficient gateways for global commerce while mitigating transnational threats.",
   },
   {
-    icon: <Clock size={28} color="#1a9988" />,
-    title: "Efficiency",
+    icon: <Leaf size={28} color="#1a9988" />,
+    title: "Resource & Food Sustainability Services",
     description:
-      "We respect your time. Fast turnaround times without compromising on quality or accuracy.",
+      "Utilizing Geospatial Intelligence (GEOINT), we provide high-level monitoring for Food Security, Resource Security, and Ecological Security. We help our partners protect agricultural hubs and mineral extraction sites through advanced data modeling and risk assessment.",
+  },
+  {
+    icon: <Users size={28} color="#e5745a" />,
+    title: "Societal & Human Stability Services",
+    description:
+      "We provide the intellectual and data-rich frameworks necessary to enhance Human Security and Societal Security. Our services focus on strengthening institutional integrity and safeguarding Cultural Security, ensuring the long-term resilience of the social fabric.",
   },
 ];
 
@@ -70,7 +78,7 @@ export default function About() {
               marginBottom: 16,
             }}
           >
-            About Oba-Meds
+            About Intelligensys & Strategies
           </h1>
           <p
             style={{
@@ -81,8 +89,7 @@ export default function About() {
               lineHeight: 1.7,
             }}
           >
-            Leading the future of medical diagnostics in Nigeria with
-            cutting-edge technology and compassionate care.
+            Intelligensys & Strategies is a high-performance technology and strategic services firm. We provide the advanced intelligence frameworks and data-driven systems required to support Nigeria’s strategic objectives and economic stability.
           </p>
         </div>
       </div>
@@ -112,7 +119,7 @@ export default function About() {
                     display: "block",
                   }}
                 >
-                  Our Story
+                  Our Legacy
                 </span>
                 <h2
                   style={{
@@ -123,7 +130,7 @@ export default function About() {
                     marginBottom: "0.8em",
                   }}
                 >
-                  Committed to Your Health Since 2015
+                  Established in 2006
                 </h2>
                 <p
                   style={{
@@ -134,10 +141,7 @@ export default function About() {
                     marginBottom: "1.2em",
                   }}
                 >
-                  Oba-Meds Laboratory was founded with a singular mission: to make
-                  high-quality medical diagnostics accessible to every Nigerian. What
-                  started as a small diagnostic center in Abuja has grown into one of
-                  the most trusted laboratory networks in the country.
+                  Established in 2006 as Quorum Technologies, we have built a legacy of transforming complex security variables into actionable strategic services. We enable our partners to navigate the multi-dimensional challenges of the modern era with precision and technical confidence.
                 </p>
                 <p
                   style={{
@@ -148,23 +152,7 @@ export default function About() {
                     marginBottom: "1.2em",
                   }}
                 >
-                  Our state-of-the-art facilities are equipped with the latest
-                  diagnostic technology, operated by a team of highly qualified
-                  pathologists, laboratory scientists, and healthcare professionals
-                  dedicated to delivering accurate results with compassion.
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: 16,
-                    color: "#2c2c2c",
-                    lineHeight: 1.7,
-                  }}
-                >
-                  We believe that early detection and accurate diagnosis are the
-                  cornerstones of effective healthcare. That's why we continuously
-                  invest in the latest technology and training to ensure our patients
-                  receive the best possible care.
+                  We serve as a specialized partner to government institutions and private-sector leaders, offering the technical clarity required to protect assets, stabilize environments, and facilitate growth.
                 </p>
               </div>
               <div
@@ -176,7 +164,7 @@ export default function About() {
               >
                 <img
                   src="/images/about-team.jpg"
-                  alt="Oba-Meds Laboratory Team"
+                  alt="Intelligensys & Strategies Team"
                   style={{
                     width: "100%",
                     height: "auto",
@@ -189,14 +177,13 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* The Intelligensys Advantage */}
       <section style={{ background: "#f4f2ef", padding: "5em 0" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: "3em",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
             <ScrollSection>
@@ -204,66 +191,32 @@ export default function About() {
                 style={{
                   background: "white",
                   borderRadius: 16,
-                  padding: "2.5em",
+                  padding: "3em",
                   boxShadow: "0 4px 24px rgba(0,0,0,0.04)",
+                  maxWidth: 800,
+                  textAlign: "center",
                 }}
               >
+                <Target size={40} color="#1a9988" style={{ marginBottom: 20 }} />
                 <h3
                   style={{
                     fontFamily: "var(--font-display)",
-                    fontSize: 24,
+                    fontSize: 28,
                     color: "#0c1426",
                     marginBottom: 16,
                   }}
                 >
-                  Our Mission
+                  The Intelligensys Advantage
                 </h3>
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: 15,
+                    fontSize: 16,
                     color: "#2c2c2c",
-                    lineHeight: 1.7,
+                    lineHeight: 1.8,
                   }}
                 >
-                  To provide accurate, reliable, and timely diagnostic services that
-                  empower healthcare providers and patients to make informed decisions
-                  about their health. We are committed to excellence, innovation, and
-                  compassionate care in everything we do.
-                </p>
-              </div>
-            </ScrollSection>
-            <ScrollSection>
-              <div
-                style={{
-                  background: "white",
-                  borderRadius: 16,
-                  padding: "2.5em",
-                  boxShadow: "0 4px 24px rgba(0,0,0,0.04)",
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: 24,
-                    color: "#0c1426",
-                    marginBottom: 16,
-                  }}
-                >
-                  Our Vision
-                </h3>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: 15,
-                    color: "#2c2c2c",
-                    lineHeight: 1.7,
-                  }}
-                >
-                  To become the leading diagnostic laboratory network in Africa,
-                  recognized for our unwavering commitment to quality, innovation, and
-                  patient-centered care. We envision a future where every individual has
-                  access to world-class diagnostic services.
+                  We don’t just analyze the landscape; we provide the specialized services to master it. By fusing Data Science with National Security Strategy, Intelligensys & Strategies serves as a technical vanguard, empowering our partners to achieve multi-dimensional stability and long-term success.
                 </p>
               </div>
             </ScrollSection>
@@ -271,7 +224,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Services */}
       <section style={{ background: "white", padding: "5em 0" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
           <ScrollSection>
@@ -288,7 +241,7 @@ export default function About() {
                   display: "block",
                 }}
               >
-                What Drives Us
+                What We Do
               </span>
               <h2
                 style={{
@@ -297,7 +250,7 @@ export default function About() {
                   color: "#0c1426",
                 }}
               >
-                Our Core Values
+                Our Service Dimensions
               </h2>
             </div>
           </ScrollSection>
@@ -305,18 +258,18 @@ export default function About() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-              gap: "1.5em",
+              gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+              gap: "2em",
             }}
           >
-            {values.map((value, i) => (
+            {services.map((service, i) => (
               <ScrollSection key={i}>
                 <div
                   style={{
                     background: "#f4f2ef",
                     borderRadius: 16,
                     padding: "2em",
-                    textAlign: "center",
+                    height: "100%",
                   }}
                 >
                   <div
@@ -328,30 +281,30 @@ export default function About() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      margin: "0 auto 16px",
+                      marginBottom: "16px",
                     }}
                   >
-                    {value.icon}
+                    {service.icon}
                   </div>
                   <h4
                     style={{
                       fontFamily: "var(--font-display)",
-                      fontSize: 18,
+                      fontSize: 20,
                       color: "#0c1426",
-                      marginBottom: 8,
+                      marginBottom: 12,
                     }}
                   >
-                    {value.title}
+                    {service.title}
                   </h4>
                   <p
                     style={{
                       fontFamily: "var(--font-body)",
-                      fontSize: 14,
+                      fontSize: 15,
                       color: "#2c2c2c",
                       lineHeight: 1.6,
                     }}
                   >
-                    {value.description}
+                    {service.description}
                   </p>
                 </div>
               </ScrollSection>

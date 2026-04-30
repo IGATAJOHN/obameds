@@ -2,19 +2,17 @@ import { Link } from "react-router";
 import { DNAHelix } from "@/components/DNAHelix";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
-  CheckCircle2,
-  Home as HomeIcon,
-  Beaker,
-  Droplets,
-  Microscope,
-  Dna,
-  Clock,
-  Award,
+  ShieldCheck,
+  Briefcase,
+  Globe,
+  Map,
   Users,
-  Truck,
+  Award,
   ChevronDown,
   Star,
   Quote,
+  Target,
+  Activity
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trpc } from "@/providers/trpc";
@@ -47,72 +45,67 @@ export default function Home() {
 
   const services = [
     {
-      icon: <Beaker size={32} color="#e5745a" />,
-      title: "Blood Tests",
+      icon: <ShieldCheck size={32} color="#e5745a" />,
+      title: "Cyber & Technical Security",
       description:
-        "Complete blood count, lipid profile, glucose testing, and more.",
+        "Specialized services for Science and Technology Security, including Cybersecurity for critical infrastructure and rigorous auditing of AI systems.",
     },
     {
-      icon: <CheckCircle2 size={32} color="#1a9988" />,
-      title: "Health Screening",
+      icon: <Briefcase size={32} color="#1a9988" />,
+      title: "Economic & Financial Integrity",
       description:
-        "Comprehensive wellness checks and preventive health panels.",
+        "Frameworks to enhance Financial and Economic Security, neutralizing illicit financial flows and organized crime so prosperity and investment can thrive.",
     },
     {
-      icon: <HomeIcon size={32} color="#4f8298" />,
-      title: "Home Sample Collection",
-      description: "Get tested from the comfort of your home. We come to you.",
+      icon: <Globe size={32} color="#4f8298" />,
+      title: "Trade & Border Facilitation",
+      description: "Technological enablement of secure trade corridors, ensuring borders function as efficient gateways for global commerce while mitigating transnational threats.",
     },
     {
-      icon: <Droplets size={32} color="#e5745a" />,
-      title: "Urinalysis",
+      icon: <Map size={32} color="#e5745a" />,
+      title: "Resource & Food Sustainability",
       description:
-        "Full urine analysis for diagnostic and monitoring purposes.",
+        "Geospatial Intelligence (GEOINT) providing high-level monitoring for Food, Resource, and Ecological Security through advanced data modeling.",
     },
     {
-      icon: <Microscope size={32} color="#1a9988" />,
-      title: "Hormonal Assays",
+      icon: <Users size={32} color="#1a9988" />,
+      title: "Societal & Human Stability",
       description:
-        "Thyroid function, fertility hormones, and endocrine testing.",
-    },
-    {
-      icon: <Dna size={32} color="#4f8298" />,
-      title: "Genetic Testing",
-      description: "Carrier screening and personalized genetic diagnostics.",
+        "Intellectual and data-rich frameworks to enhance Human and Societal Security, strengthening institutional integrity and safeguarding Cultural Security.",
     },
   ];
 
   const whyChoose = [
     {
       number: "01",
-      icon: <Clock size={24} color="#1a9988" />,
-      title: "Fast Turnaround",
-      description: "Get your results within 24-48 hours for most tests.",
+      icon: <Target size={24} color="#1a9988" />,
+      title: "Precision & Clarity",
+      description: "Transforming complex security variables into actionable strategic services.",
     },
     {
       number: "02",
-      icon: <Award size={24} color="#1a9988" />,
-      title: "Certified Laboratory",
-      description: "Fully accredited by Nigerian Medical Laboratory Council.",
+      icon: <Activity size={24} color="#1a9988" />,
+      title: "Data-Driven Systems",
+      description: "Advanced intelligence frameworks supporting strategic objectives and stability.",
     },
     {
       number: "03",
-      icon: <Users size={24} color="#1a9988" />,
-      title: "Expert Team",
-      description: "Highly trained pathologists and laboratory scientists.",
+      icon: <ShieldCheck size={24} color="#1a9988" />,
+      title: "Technical Vanguard",
+      description: "Fusing Data Science with National Security Strategy for our partners.",
     },
     {
       number: "04",
-      icon: <Truck size={24} color="#1a9988" />,
-      title: "Home Service",
-      description: "Sample collection at your doorstep for your convenience.",
+      icon: <Award size={24} color="#1a9988" />,
+      title: "Legacy of Excellence",
+      description: "Established in 2006, serving government and private-sector leaders.",
     },
   ];
 
   const stats = [
-    { value: "10,000+", label: "Tests Completed" },
-    { value: "50+", label: "Medical Partners" },
-    { value: "99%", label: "Accuracy Rate" },
+    { value: "2006", label: "Established" },
+    { value: "100+", label: "Strategic Partners" },
+    { value: "360°", label: "Security Frameworks" },
   ];
 
   return (
@@ -154,7 +147,7 @@ export default function Home() {
               textWrap: "balance",
             }}
           >
-            Accurate Diagnostics for Better Health
+            Intelligensys & Strategies
           </h1>
           <p
             style={{
@@ -167,8 +160,7 @@ export default function Home() {
               margin: "0 auto 2em",
             }}
           >
-            Book your medical tests online and get fast, reliable results from
-            certified laboratories.
+            A high-performance technology and strategic services firm providing advanced intelligence frameworks and data-driven systems.
           </p>
           <div
             style={{
@@ -178,7 +170,7 @@ export default function Home() {
               flexWrap: "wrap",
             }}
           >
-            <a href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+            <Link to="/contact">
               <Button
                 style={{
                   background: "#e5745a",
@@ -200,9 +192,9 @@ export default function Home() {
                   (e.target as HTMLElement).style.transform = "scale(1)";
                 }}
               >
-                Book a Test
+                Partner With Us
               </Button>
-            </a>
+            </Link>
             <Link to="/services">
               <Button
                 variant="outline"
@@ -230,7 +222,7 @@ export default function Home() {
                     "rgba(255,255,255,0.4)";
                 }}
               >
-                View Services
+                View Dimensions
               </Button>
             </Link>
           </div>
@@ -276,7 +268,7 @@ export default function Home() {
                     display: "block",
                   }}
                 >
-                  Welcome to Oba-Meds
+                  About Us
                 </span>
                 <h2
                   style={{
@@ -287,7 +279,7 @@ export default function Home() {
                     marginBottom: "0.5em",
                   }}
                 >
-                  Your Trusted Partner in Medical Diagnostics
+                  Technical Clarity for Strategic Growth
                 </h2>
               </div>
               <div>
@@ -300,10 +292,18 @@ export default function Home() {
                     marginBottom: "1.5em",
                   }}
                 >
-                  We provide comprehensive laboratory testing services with a
-                  commitment to accuracy, speed, and patient care. From routine
-                  blood work to specialized diagnostics, our state-of-the-art
-                  facilities ensure you get the answers you need.
+                  We provide the advanced intelligence frameworks and data-driven systems required to support Nigeria’s strategic objectives and economic stability. We serve as a specialized partner to government institutions and private-sector leaders, offering the technical clarity required to protect assets, stabilize environments, and facilitate growth.
+                </p>
+                <p
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: 16,
+                    color: "#2c2c2c",
+                    lineHeight: 1.7,
+                    marginBottom: "1.5em",
+                  }}
+                >
+                  Established in 2006 as Quorum Technologies, we have built a legacy of transforming complex security variables into actionable strategic services. We enable our partners to navigate the multi-dimensional challenges of the modern era with precision and technical confidence.
                 </p>
                 <Link to="/about">
                   <Button
@@ -353,7 +353,7 @@ export default function Home() {
                   display: "block",
                 }}
               >
-                Our Services
+                Our Service Dimensions
               </span>
               <h2
                 style={{
@@ -362,7 +362,7 @@ export default function Home() {
                   color: "#0c1426",
                 }}
               >
-                Comprehensive Lab Testing
+                Multi-Dimensional Stability Solutions
               </h2>
             </div>
           </ScrollSection>
@@ -384,6 +384,9 @@ export default function Home() {
                     boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
                     transition: "transform 300ms, box-shadow 300ms",
                     cursor: "pointer",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLElement).style.transform =
@@ -414,6 +417,7 @@ export default function Home() {
                       fontSize: 14,
                       color: "#2c2c2c",
                       lineHeight: 1.6,
+                      flexGrow: 1,
                     }}
                   >
                     {service.description}
@@ -456,17 +460,30 @@ export default function Home() {
                   display: "block",
                 }}
               >
-                Why Choose Us
+                The Intelligensys Advantage
               </span>
               <h2
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
                   color: "white",
+                  marginBottom: "0.5em",
                 }}
               >
-                Excellence in Every Test
+                Mastering the Landscape
               </h2>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: 16,
+                  color: "rgba(255,255,255,0.8)",
+                  maxWidth: 800,
+                  margin: "0 auto",
+                  lineHeight: 1.6,
+                }}
+              >
+                We don’t just analyze the landscape; we provide the specialized services to master it. By fusing Data Science with National Security Strategy, Intelligensys & Strategies serves as a technical vanguard, empowering our partners to achieve multi-dimensional stability and long-term success.
+              </p>
             </div>
           </ScrollSection>
 
@@ -475,11 +492,12 @@ export default function Home() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
               gap: "1.5em",
+              marginTop: "3em",
             }}
           >
             {whyChoose.map((item, i) => (
               <ScrollSection key={i}>
-                <div className="glass-card" style={{ padding: "2em" }}>
+                <div className="glass-card" style={{ padding: "2em", height: "100%" }}>
                   <div
                     style={{
                       display: "flex",
@@ -553,7 +571,7 @@ export default function Home() {
                   color: "#0c1426",
                 }}
               >
-                What Our Patients Say
+                Trusted by Leaders
               </h2>
             </div>
           </ScrollSection>
@@ -695,7 +713,7 @@ export default function Home() {
                   marginBottom: "0.5em",
                 }}
               >
-                Ready to Book Your Test?
+                Ready to Secure Your Future?
               </h2>
               <p
                 style={{
@@ -705,9 +723,9 @@ export default function Home() {
                   marginBottom: "1.5em",
                 }}
               >
-                Book online in minutes and get fast, accurate results.
+                Partner with us for advanced intelligence frameworks and data-driven stability solutions.
               </p>
-              <a href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+              <Link to="/contact" style={{ textDecoration: "none" }}>
                 <Button
                   style={{
                     background: "#e5745a",
@@ -729,9 +747,9 @@ export default function Home() {
                     (e.target as HTMLElement).style.transform = "scale(1)";
                   }}
                 >
-                  Book a Test Now
+                  Contact Us Now
                 </Button>
-              </a>
+              </Link>
             </div>
           </ScrollSection>
         </div>
