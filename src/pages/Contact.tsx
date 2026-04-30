@@ -67,8 +67,8 @@ export default function Contact() {
     {
       icon: <Mail size={20} color="#1a9988" />,
       label: "Email",
-      value: "info@obameds.ng",
-      href: "mailto:info@obameds.ng",
+      value: "info@intelligensys.ng",
+      href: "mailto:info@intelligensys.ng",
     },
     {
       icon: <MapPin size={20} color="#1a9988" />,
@@ -370,7 +370,7 @@ export default function Contact() {
 
                 {/* WhatsApp Button */}
                 <a
-                  href="https://wa.me/2348012345678?text=Hello%20Oba-Meds!%20I%20have%20a%20question."
+                  href="https://wa.me/2348012345678?text=Hello%20Intelligensys!%20I%20would%20like%20to%20discuss%20a%20partnership."
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -489,7 +489,7 @@ export default function Contact() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Oba-Meds Laboratory Location"
+          title="Intelligensys Headquarters"
         />
       </section>
     </div>

@@ -1,15 +1,14 @@
 import { Link } from "react-router";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { trpc } from "@/providers/trpc";
 import { Button } from "@/components/ui/button";
 import {
-  Beaker,
-  CheckCircle2,
-  Droplets,
-  Microscope,
-  Dna,
-  FlaskConical,
+  ShieldCheck,
+  Briefcase,
+  Globe,
+  Map,
+  Users,
   ArrowRight,
+  CheckCircle2,
 } from "lucide-react";
 
 function ScrollSection({
@@ -35,285 +34,282 @@ function ScrollSection({
   );
 }
 
-const categoryIcons: Record<string, React.ReactNode> = {
-  blood: <Beaker size={32} color="#e5745a" />,
-  urine: <Droplets size={32} color="#e5745a" />,
-  health_package: <CheckCircle2 size={32} color="#1a9988" />,
-  specialized: <Microscope size={32} color="#4f8298" />,
-  hormonal: <FlaskConical size={32} color="#1a9988" />,
-  genetic: <Dna size={32} color="#4f8298" />,
-};
-
-const categoryLabels: Record<string, string> = {
-  blood: "Blood Tests",
-  urine: "Urine Tests",
-  health_package: "Health Packages",
-  specialized: "Specialized Diagnostics",
-  hormonal: "Hormonal Assays",
-  genetic: "Genetic Testing",
-};
-
-const categoryImages: Record<string, string> = {
-  blood: "/images/service-blood-tests.jpg",
-  urine: "/images/service-urinalysis.jpg",
-  health_package: "/images/service-health-screening.jpg",
-  specialized: "/images/service-hormonal.jpg",
-  hormonal: "/images/service-hormonal.jpg",
-  genetic: "/images/service-genetic.jpg",
-};
+const serviceDimensions = [
+  {
+    icon: <ShieldCheck size={40} color="#1a9988" />,
+    title: "Cyber & Technical Security Services",
+    tag: "Science & Technology Security",
+    description:
+      "We provide specialized services for Science and Technology Security. Our focus includes Cybersecurity for critical infrastructure and the rigorous auditing of AI systems, ensuring that Nigeria's digital frontier remains a secure platform for innovation.",
+    capabilities: [
+      "Critical infrastructure cybersecurity",
+      "AI systems auditing & assurance",
+      "Digital threat intelligence",
+      "Technology risk assessment",
+    ],
+    color: "#1a9988",
+  },
+  {
+    icon: <Briefcase size={40} color="#e5745a" />,
+    title: "Economic & Financial Integrity Services",
+    tag: "Financial & Economic Security",
+    description:
+      "We deliver the frameworks required to enhance Financial Security and Economic Security. By offering services that neutralize illicit financial flows and organized crime, we help foster an environment where prosperity and investment can thrive.",
+    capabilities: [
+      "Illicit financial flow neutralization",
+      "Organized crime disruption frameworks",
+      "Investment environment stabilization",
+      "Economic security assessments",
+    ],
+    color: "#e5745a",
+  },
+  {
+    icon: <Globe size={40} color="#4f8298" />,
+    title: "Trade & Border Facilitation Services",
+    tag: "Border Security",
+    description:
+      "We design the systems that underpin Border Security. Our services focus on the technological enablement of secure trade corridors, ensuring that borders function as efficient gateways for global commerce while mitigating transnational threats.",
+    capabilities: [
+      "Secure trade corridor design",
+      "Border technology enablement",
+      "Transnational threat mitigation",
+      "Cross-border commerce facilitation",
+    ],
+    color: "#4f8298",
+  },
+  {
+    icon: <Map size={40} color="#1a9988" />,
+    title: "Resource & Food Sustainability Services",
+    tag: "GEOINT · Food · Resource · Ecological Security",
+    description:
+      "Utilizing Geospatial Intelligence (GEOINT), we provide high-level monitoring for Food Security, Resource Security, and Ecological Security. We help our partners protect agricultural hubs and mineral extraction sites through advanced data modeling and risk assessment.",
+    capabilities: [
+      "Geospatial intelligence (GEOINT) monitoring",
+      "Agricultural hub protection",
+      "Mineral site risk assessment",
+      "Ecological security data modeling",
+    ],
+    color: "#1a9988",
+  },
+  {
+    icon: <Users size={40} color="#e5745a" />,
+    title: "Societal & Human Stability Services",
+    tag: "Human · Societal · Cultural Security",
+    description:
+      "We provide the intellectual and data-rich frameworks necessary to enhance Human Security and Societal Security. Our services focus on strengthening institutional integrity and safeguarding Cultural Security, ensuring the long-term resilience of the social fabric.",
+    capabilities: [
+      "Institutional integrity strengthening",
+      "Cultural security safeguarding",
+      "Social fabric resilience frameworks",
+      "Human security data analysis",
+    ],
+    color: "#e5745a",
+  },
+];
 
 export default function Services() {
-  const { data: tests } = trpc.test.listActive.useQuery();
-
-  // Group tests by category
-  const groupedTests = (tests ?? []).reduce(
-    (acc, test) => {
-      if (!acc[test.category]) acc[test.category] = [];
-      acc[test.category].push(test);
-      return acc;
-    },
-    {} as Record<string, NonNullable<typeof tests>>
-  );
-
-  const formatPrice = (price: string) => {
-    return new Intl.NumberFormat("en-NG", {
-      style: "currency",
-      currency: "NGN",
-      minimumFractionDigits: 0,
-    }).format(parseFloat(price));
-  };
-
   return (
     <div style={{ paddingTop: 72 }}>
       {/* Hero */}
       <div style={{ background: "#0c1426", padding: "5em 0 4em" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
+          <span
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: 13,
+              fontWeight: 600,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#1a9988",
+              display: "block",
+              marginBottom: 16,
+            }}
+          >
+            Our Service Dimensions
+          </span>
           <h1
             style={{
               fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3.5rem)",
               color: "white",
               marginBottom: 16,
+              lineHeight: 1.1,
             }}
           >
-            Our Services
+            Multi-Dimensional Stability Solutions
           </h1>
           <p
             style={{
               fontFamily: "var(--font-body)",
               fontSize: 18,
               color: "rgba(255,255,255,0.7)",
-              maxWidth: 600,
+              maxWidth: 680,
               lineHeight: 1.7,
             }}
           >
-            Comprehensive laboratory testing services with state-of-the-art
-            equipment and expert analysis. Browse our categories below.
+            We deliver advanced intelligence frameworks across five strategic
+            dimensions, empowering government institutions and private-sector
+            leaders to navigate the modern era with precision.
           </p>
         </div>
       </div>
 
-      {/* Service Categories */}
-      <div style={{ background: "#f4f2ef", padding: "4em 0" }}>
+      {/* Service Dimensions */}
+      <div style={{ background: "#f4f2ef", padding: "5em 0" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
-          {Object.entries(groupedTests).map(([category, categoryTests], idx) => (
-            <ScrollSection key={category}>
-              <div
-                style={{
-                  marginBottom: idx < Object.keys(groupedTests).length - 1 ? "4em" : 0,
-                }}
-              >
-                {/* Category Header */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "4em" }}>
+            {serviceDimensions.map((service, idx) => (
+              <ScrollSection key={idx}>
                 <div
                   style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                    gap: "2em",
-                    alignItems: "center",
-                    marginBottom: "2em",
+                    gap: "3em",
+                    alignItems: "start",
+                    background: "white",
+                    borderRadius: 20,
+                    overflow: "hidden",
+                    boxShadow: "0 4px 24px rgba(0,0,0,0.05)",
                   }}
                 >
-                  <div>
-                    <div
+                  {/* Left accent bar */}
+                  <div
+                    style={{
+                      padding: "3em",
+                      borderLeft: `6px solid ${service.color}`,
+                    }}
+                  >
+                    <div style={{ marginBottom: 20 }}>{service.icon}</div>
+                    <span
                       style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 12,
+                        fontFamily: "var(--font-body)",
+                        fontSize: 11,
+                        fontWeight: 700,
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        color: service.color,
+                        display: "block",
                         marginBottom: 12,
                       }}
                     >
-                      {categoryIcons[category] ?? (
-                        <Beaker size={32} color="#e5745a" />
-                      )}
-                      <h2
-                        style={{
-                          fontFamily: "var(--font-display)",
-                          fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                          color: "#0c1426",
-                        }}
-                      >
-                        {categoryLabels[category] ?? category}
-                      </h2>
-                    </div>
+                      {service.tag}
+                    </span>
+                    <h2
+                      style={{
+                        fontFamily: "var(--font-display)",
+                        fontSize: "clamp(1.4rem, 2.5vw, 1.8rem)",
+                        color: "#0c1426",
+                        lineHeight: 1.2,
+                        marginBottom: "1em",
+                      }}
+                    >
+                      {service.title}
+                    </h2>
                     <p
                       style={{
                         fontFamily: "var(--font-body)",
                         fontSize: 15,
                         color: "#2c2c2c",
-                        lineHeight: 1.7,
+                        lineHeight: 1.75,
                       }}
                     >
-                      {category === "blood" &&
-                        "Our blood tests provide critical insights into your overall health, from routine screenings to specialized panels."}
-                      {category === "urine" &&
-                        "Comprehensive urine analysis for diagnostic and monitoring purposes, including culture and sensitivity testing."}
-                      {category === "health_package" &&
-                        "Bundled screening packages designed for comprehensive health assessment at great value."}
-                      {category === "specialized" &&
-                        "Advanced diagnostic tests for specific conditions including infectious diseases and vitamin deficiencies."}
-                      {category === "hormonal" &&
-                        "Endocrine function testing for thyroid, fertility, and reproductive health assessment."}
-                      {category === "genetic" &&
-                        "Cutting-edge genetic screening for carrier status and personalized health insights."}
+                      {service.description}
                     </p>
                   </div>
+
+                  {/* Capabilities */}
                   <div
                     style={{
-                      borderRadius: 16,
-                      overflow: "hidden",
-                      height: 200,
+                      padding: "3em",
+                      background: "#f4f2ef",
                     }}
                   >
-                    <img
-                      src={categoryImages[category] ?? "/images/service-blood-tests.jpg"}
-                      alt={categoryLabels[category] ?? category}
+                    <h4
                       style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {/* Tests Grid */}
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-                    gap: "1em",
-                  }}
-                >
-                  {categoryTests?.map((test) => (
-                    <div
-                      key={test.id}
-                      style={{
-                        background: "white",
-                        borderRadius: 12,
-                        padding: "1.25em",
-                        boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "flex-start",
-                        transition: "transform 300ms, box-shadow 300ms",
-                        cursor: "pointer",
-                      }}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.transform =
-                          "translateY(-2px)";
-                        (e.currentTarget as HTMLElement).style.boxShadow =
-                          "0 4px 16px rgba(0,0,0,0.08)";
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-                        (e.currentTarget as HTMLElement).style.boxShadow =
-                          "0 2px 8px rgba(0,0,0,0.04)";
+                        fontFamily: "var(--font-display)",
+                        fontSize: 16,
+                        color: "#0c1426",
+                        marginBottom: "1.2em",
+                        letterSpacing: "0.04em",
+                        textTransform: "uppercase",
                       }}
                     >
-                      <div style={{ flex: 1 }}>
-                        <h4
+                      Key Capabilities
+                    </h4>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 14,
+                      }}
+                    >
+                      {service.capabilities.map((cap, i) => (
+                        <div
+                          key={i}
                           style={{
-                            fontFamily: "var(--font-display)",
-                            fontSize: 16,
-                            color: "#0c1426",
-                            marginBottom: 4,
-                            textTransform: "none",
+                            display: "flex",
+                            alignItems: "flex-start",
+                            gap: 12,
                           }}
                         >
-                          {test.name}
-                        </h4>
-                        <p
-                          style={{
-                            fontFamily: "var(--font-body)",
-                            fontSize: 13,
-                            color: "#2c2c2c",
-                            lineHeight: 1.5,
-                            display: "-webkit-box",
-                            WebkitLineClamp: 2,
-                            WebkitBoxOrient: "vertical",
-                            overflow: "hidden",
-                          }}
-                        >
-                          {test.description}
-                        </p>
-                      </div>
-                      <div style={{ textAlign: "right", marginLeft: 12 }}>
-                        <p
-                          style={{
-                            fontFamily: "var(--font-display)",
-                            fontSize: 18,
-                            color: "#e5745a",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          {formatPrice(test.price)}
-                        </p>
-                        <a
-                          href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            fontFamily: "var(--font-body)",
-                            fontSize: 12,
-                            color: "#1a9988",
-                            textDecoration: "none",
-                            fontWeight: 600,
-                          }}
-                        >
-                          Book →
-                        </a>
-                      </div>
+                          <CheckCircle2
+                            size={18}
+                            color={service.color}
+                            style={{ marginTop: 2, flexShrink: 0 }}
+                          />
+                          <span
+                            style={{
+                              fontFamily: "var(--font-body)",
+                              fontSize: 15,
+                              color: "#2c2c2c",
+                              lineHeight: 1.5,
+                            }}
+                          >
+                            {cap}
+                          </span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </div>
-            </ScrollSection>
-          ))}
+              </ScrollSection>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* CTA */}
-      <div style={{ background: "#0c1426", padding: "4em 0" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em", textAlign: "center" }}>
+      <div style={{ background: "#0c1426", padding: "5em 0" }}>
+        <div
+          style={{
+            maxWidth: 1400,
+            margin: "0 auto",
+            padding: "0 2.22em",
+            textAlign: "center",
+          }}
+        >
           <h2
             style={{
               fontFamily: "var(--font-display)",
-              fontSize: "clamp(1.5rem, 3vw, 2rem)",
+              fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
               color: "white",
               marginBottom: 16,
             }}
           >
-            Need a Specific Test?
+            Ready to Engage a Strategic Partner?
           </h2>
           <p
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: 16,
+              fontSize: 17,
               color: "rgba(255,255,255,0.7)",
-              marginBottom: 24,
+              marginBottom: 32,
+              maxWidth: 600,
+              margin: "0 auto 32px",
             }}
           >
-            Contact us for custom testing packages and corporate health screenings.
+            Contact us to discuss how Intelligensys & Strategies can support
+            your objectives across any of our service dimensions.
           </p>
           <Link to="/contact">
             <Button
@@ -324,8 +320,8 @@ export default function Services() {
                 fontFamily: "var(--font-display)",
                 textTransform: "uppercase",
                 letterSpacing: "0.08em",
-                fontSize: 14,
-                padding: "12px 28px",
+                fontSize: 15,
+                padding: "14px 36px",
                 border: "none",
                 cursor: "pointer",
               }}

@@ -66,7 +66,7 @@ export default function Admin() {
 
   // Settings form
   const [settingsPhone, setSettingsPhone] = useState("+234 801 234 5678");
-  const [settingsEmail, setSettingsEmail] = useState("info@obameds.ng");
+  const [settingsEmail, setSettingsEmail] = useState("info@intelligensys.ng");
   const [settingsWhatsApp, setSettingsWhatsApp] = useState("+234 801 234 5678");
   const [settingsHours, setSettingsHours] = useState("Mon - Sat: 7:00 AM - 6:00 PM");
 

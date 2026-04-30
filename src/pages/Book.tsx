@@ -127,8 +127,7 @@ export default function Book() {
               marginBottom: 32,
             }}
           >
-            Thank you for booking with Oba-Meds. Our team will contact you
-            shortly to confirm your appointment details.
+            Thank you for contacting Intelligensys & Strategies. Our team will reach out to you shortly to confirm your engagement details.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
             <Button

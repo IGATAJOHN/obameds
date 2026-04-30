@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
-import { Menu, X, FlaskConical } from "lucide-react";
+import { Menu, X, Hexagon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -61,7 +61,7 @@ export function Navbar() {
               justifyContent: "center",
             }}
           >
-            <FlaskConical size={20} color="white" strokeWidth={2} />
+            <Hexagon size={20} color="white" strokeWidth={2} />
           </div>
           <span
             style={{
@@ -72,7 +72,7 @@ export function Navbar() {
               textTransform: "uppercase",
             }}
           >
-            Oba-Meds
+            Intelligensys
           </span>
         </Link>
 
@@ -107,7 +107,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <a href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
             <Button
               style={{
                 background: "#e5745a",
@@ -129,9 +129,9 @@ export function Navbar() {
                 (e.target as HTMLElement).style.background = "#e5745a";
               }}
             >
-              Book a Test
+              Partner With Us
             </Button>
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -184,7 +184,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a href="https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} style={{ textDecoration: "none" }}>
+          <Link to="/contact" onClick={() => setMobileOpen(false)} style={{ textDecoration: "none" }}>
             <Button
               style={{
                 background: "#e5745a",
@@ -201,9 +201,9 @@ export function Navbar() {
                 marginTop: 16,
               }}
             >
-              Book a Test
+              Partner With Us
             </Button>
-          </a>
+          </Link>
         </div>
       )}
     </nav>

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { FlaskConical, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
+import { Hexagon, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -33,7 +33,7 @@ export function Footer() {
                   justifyContent: "center",
                 }}
               >
-                <FlaskConical size={20} color="white" strokeWidth={2} />
+                <Hexagon size={20} color="white" strokeWidth={2} />
               </div>
               <span
                 style={{
@@ -44,7 +44,7 @@ export function Footer() {
                   textTransform: "uppercase",
                 }}
               >
-                Oba-Meds
+                Intelligensys
               </span>
             </div>
             <p
@@ -55,8 +55,7 @@ export function Footer() {
                 fontFamily: "var(--font-body)",
               }}
             >
-              Your trusted partner in medical diagnostics. Accurate results,
-              fast turnaround, and compassionate care.
+              A high-performance technology and strategic services firm. Providing advanced intelligence frameworks and data-driven systems.
             </p>
           </div>
 
@@ -83,7 +82,7 @@ export function Footer() {
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <Mail size={16} color="#1a9988" />
                 <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 14 }}>
-                  info@obameds.ng
+                  info@intelligensys.ng
                 </span>
               </div>
               <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
@@ -113,7 +112,7 @@ export function Footer() {
               {[
                 { label: "Services", href: "/services" },
                 { label: "About Us", href: "/about" },
-                { label: "Book a Test", href: "https://www.qudoctor.com/book/oba-medical-diagnostics-services-ltd" },
+                { label: "Partner With Us", href: "/contact" },
                 { label: "FAQ", href: "/faq" },
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
@@ -204,7 +203,7 @@ export function Footer() {
               fontFamily: "var(--font-body)",
             }}
           >
-            &copy; 2025 Oba-Meds Laboratory. All rights reserved.
+            &copy; 2026 Intelligensys & Strategies. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: 16 }}>
             {[Facebook, Twitter, Instagram].map((Icon, i) => (
