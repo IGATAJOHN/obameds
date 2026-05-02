@@ -76,7 +76,7 @@ export function Footer() {
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <Phone size={16} color="#1a9988" />
                 <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 14 }}>
-                  +234 801 234 5678
+                  +234 803 330 4891
                 </span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -88,8 +88,8 @@ export function Footer() {
               <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
                 <MapPin size={16} color="#1a9988" style={{ marginTop: 2 }} />
                 <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 14 }}>
-                  Plot 42, Lugbe Expressway,<br />
-                  Abuja, Nigeria
+                  No 11 Ado-Ekiti Cl, Municipal,<br />
+                  Abuja 900001, FCT
                 </span>
               </div>
             </div>

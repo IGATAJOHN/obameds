@@ -65,9 +65,9 @@ export default function Admin() {
   const [testimonialRating, setTestimonialRating] = useState(5);
 
   // Settings form
-  const [settingsPhone, setSettingsPhone] = useState("+234 801 234 5678");
+  const [settingsPhone, setSettingsPhone] = useState("+234 803 330 4891");
   const [settingsEmail, setSettingsEmail] = useState("info@intelligensys.ng");
-  const [settingsWhatsApp, setSettingsWhatsApp] = useState("+234 801 234 5678");
+  const [settingsWhatsApp, setSettingsWhatsApp] = useState("+234 803 330 4891");
   const [settingsHours, setSettingsHours] = useState("Mon - Sat: 7:00 AM - 6:00 PM");
 
   const utils = trpc.useUtils();

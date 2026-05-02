@@ -1,16 +1,10 @@
-import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Phone,
   Mail,
   MapPin,
   Clock,
   MessageCircle,
-  Send,
 } from "lucide-react";
 
 function ScrollSection({
@@ -37,32 +31,12 @@ function ScrollSection({
 }
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name || !email || !message) {
-      toast.error("Please fill in all required fields.");
-      return;
-    }
-    toast.success("Message sent! We'll get back to you as soon as possible.");
-    setName("");
-    setEmail("");
-    setPhone("");
-    setSubject("");
-    setMessage("");
-  };
-
   const contactInfo = [
     {
       icon: <Phone size={20} color="#1a9988" />,
       label: "Phone",
-      value: "+234 801 234 5678",
-      href: "tel:+2348012345678",
+      value: "+234 803 330 4891",
+      href: "tel:+2348033304891",
     },
     {
       icon: <Mail size={20} color="#1a9988" />,
@@ -73,7 +47,7 @@ export default function Contact() {
     {
       icon: <MapPin size={20} color="#1a9988" />,
       label: "Address",
-      value: "Plot 42, Lugbe Expressway, Abuja",
+      value: "No 11 Ado-Ekiti Cl, Municipal, Abuja 900001, FCT",
       href: "#",
     },
     {
@@ -86,15 +60,10 @@ export default function Contact() {
 
   const locations = [
     {
-      name: "Lugbe Branch",
-      address: "Plot 42, Lugbe Expressway, Federal Housing Estate, Lugbe, Abuja",
-      phone: "+234 801 234 5678",
-    },
-    {
-      name: "Jabi Branch",
-      address: "Suite 15, Jabi Lake Mall, Jabi District, Abuja",
-      phone: "+234 801 234 5679",
-    },
+      name: "Headquarters",
+      address: "No 11 Ado-Ekiti Cl, Municipal, Abuja 900001, Federal Capital Territory",
+      phone: "+234 803 330 4891",
+    }
   ];
 
   return (
@@ -134,173 +103,12 @@ export default function Contact() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gridTemplateColumns: "1fr",
+                maxWidth: 600,
+                margin: "0 auto",
                 gap: "4em",
               }}
             >
-              {/* Contact Form */}
-              <div>
-                <h2
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: 24,
-                    color: "#0c1426",
-                    marginBottom: "1.5em",
-                  }}
-                >
-                  Send Us a Message
-                </h2>
-                <form onSubmit={handleSubmit}>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                    <div>
-                      <Label
-                        style={{
-                          fontSize: 14,
-                          fontWeight: 600,
-                          color: "#2c2c2c",
-                          marginBottom: 6,
-                          display: "block",
-                        }}
-                      >
-                        Full Name *
-                      </Label>
-                      <Input
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder="Your name"
-                        style={{
-                          padding: "12px 16px",
-                          borderRadius: 8,
-                          fontSize: 14,
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <Label
-                        style={{
-                          fontSize: 14,
-                          fontWeight: 600,
-                          color: "#2c2c2c",
-                          marginBottom: 6,
-                          display: "block",
-                        }}
-                      >
-                        Email *
-                      </Label>
-                      <Input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="your@email.com"
-                        style={{
-                          padding: "12px 16px",
-                          borderRadius: 8,
-                          fontSize: 14,
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <Label
-                        style={{
-                          fontSize: 14,
-                          fontWeight: 600,
-                          color: "#2c2c2c",
-                          marginBottom: 6,
-                          display: "block",
-                        }}
-                      >
-                        Phone
-                      </Label>
-                      <Input
-                        type="tel"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+234 ..."
-                        style={{
-                          padding: "12px 16px",
-                          borderRadius: 8,
-                          fontSize: 14,
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <Label
-                        style={{
-                          fontSize: 14,
-                          fontWeight: 600,
-                          color: "#2c2c2c",
-                          marginBottom: 6,
-                          display: "block",
-                        }}
-                      >
-                        Subject
-                      </Label>
-                      <Input
-                        value={subject}
-                        onChange={(e) => setSubject(e.target.value)}
-                        placeholder="How can we help?"
-                        style={{
-                          padding: "12px 16px",
-                          borderRadius: 8,
-                          fontSize: 14,
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <Label
-                        style={{
-                          fontSize: 14,
-                          fontWeight: 600,
-                          color: "#2c2c2c",
-                          marginBottom: 6,
-                          display: "block",
-                        }}
-                      >
-                        Message *
-                      </Label>
-                      <textarea
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        placeholder="Your message..."
-                        rows={5}
-                        style={{
-                          width: "100%",
-                          padding: "12px 16px",
-                          borderRadius: 8,
-                          border: "1px solid #e0e0e0",
-                          fontFamily: "var(--font-body)",
-                          fontSize: 14,
-                          outline: "none",
-                          resize: "vertical",
-                        }}
-                      />
-                    </div>
-                    <Button
-                      type="submit"
-                      style={{
-                        background: "#e5745a",
-                        color: "white",
-                        borderRadius: 8,
-                        fontFamily: "var(--font-display)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.08em",
-                        fontSize: 14,
-                        padding: "12px 28px",
-                        border: "none",
-                        cursor: "pointer",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: 8,
-                      }}
-                    >
-                      <Send size={16} />
-                      Send Message
-                    </Button>
-                  </div>
-                </form>
-              </div>
-
               {/* Contact Info */}
               <div>
                 <h2
@@ -370,7 +178,7 @@ export default function Contact() {
 
                 {/* WhatsApp Button */}
                 <a
-                  href="https://wa.me/2348012345678?text=Hello%20Intelligensys!%20I%20would%20like%20to%20discuss%20a%20partnership."
+                  href="https://wa.me/2348033304891?text=Hello%20Intelligensys!%20I%20would%20like%20to%20discuss%20a%20partnership."
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
