@@ -11,40 +11,48 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(() => window.innerWidth >= 1024);
+  useEffect(() => {
+    const handler = () => setIsDesktop(window.innerWidth >= 1024);
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+  return isDesktop;
+}
+
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isDesktop = useIsDesktop();
 
   // Close menu on route change
   useEffect(() => {
     setMobileOpen(false);
   }, [location.pathname]);
 
-  // Close menu on resize to desktop
+  // Close menu when switching to desktop
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) setMobileOpen(false);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (isDesktop) setMobileOpen(false);
+  }, [isDesktop]);
+
+  // Scroll shadow
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Track scroll for shadow effect
+  // Lock body scroll when mobile menu is open
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    document.body.style.overflow = (!isDesktop && mobileOpen) ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
-  }, [mobileOpen]);
+  }, [mobileOpen, isDesktop]);
 
   return (
     <>
+      {/* ── Navbar Bar ── */}
       <nav
         style={{
           position: "fixed",
@@ -52,7 +60,7 @@ export function Navbar() {
           left: 0,
           right: 0,
           height: 68,
-          background: "rgba(12, 20, 38, 0.97)",
+          background: "rgba(9, 9, 11, 0.97)",
           backdropFilter: "blur(16px)",
           WebkitBackdropFilter: "blur(16px)",
           zIndex: 1000,
@@ -92,7 +100,6 @@ export function Navbar() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                flexShrink: 0,
               }}
             >
               <Hexagon size={18} color="white" strokeWidth={2} />
@@ -100,7 +107,7 @@ export function Navbar() {
             <span
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(14px, 3vw, 18px)",
+                fontSize: "clamp(13px, 3.5vw, 18px)",
                 color: "white",
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
@@ -111,194 +118,188 @@ export function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Links */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 28,
-            }}
-            className="hidden lg:flex"
-          >
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="link-underline"
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: 14,
-                  color: location.pathname === link.href ? "#e5745a" : "white",
-                  textDecoration: "none",
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                  transition: "color 300ms",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {link.label}
+          {/* Desktop: nav links + CTA — only rendered on desktop */}
+          {isDesktop && (
+            <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="link-underline"
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontSize: 14,
+                    color: location.pathname === link.href ? "#e5745a" : "white",
+                    textDecoration: "none",
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
+                    transition: "color 300ms",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <Button
+                  style={{
+                    background: "#e5745a",
+                    color: "white",
+                    borderRadius: 8,
+                    fontFamily: "var(--font-display)",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.08em",
+                    fontSize: 13,
+                    padding: "10px 22px",
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "background 300ms",
+                    whiteSpace: "nowrap",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.target as HTMLElement).style.background = "#2c2c2c";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.target as HTMLElement).style.background = "#e5745a";
+                  }}
+                >
+                  Partner With Us
+                </Button>
               </Link>
-            ))}
-          </div>
+            </div>
+          )}
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <Link to="/contact" style={{ textDecoration: "none" }}>
-              <Button
-                style={{
-                  background: "#e5745a",
-                  color: "white",
-                  borderRadius: 8,
-                  fontFamily: "var(--font-display)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  fontSize: 13,
-                  padding: "10px 22px",
-                  border: "none",
-                  cursor: "pointer",
-                  transition: "all 300ms",
-                  whiteSpace: "nowrap",
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.background = "#2c2c2c";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.background = "#e5745a";
-                }}
-              >
-                Partner With Us
-              </Button>
-            </Link>
-          </div>
-
-          {/* Mobile Hamburger Button */}
-          <button
-            className="lg:hidden"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              padding: "8px",
-              borderRadius: 8,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              transition: "background 200ms",
-              flexShrink: 0,
-            }}
-          >
-            {mobileOpen ? (
-              <X size={26} color="white" />
-            ) : (
-              <Menu size={26} color="white" />
-            )}
-          </button>
+          {/* Mobile: hamburger button — only rendered on mobile */}
+          {!isDesktop && (
+            <button
+              onClick={() => setMobileOpen((prev) => !prev)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: "6px",
+                borderRadius: 6,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: "auto",
+              }}
+            >
+              {mobileOpen ? (
+                <X size={28} color="white" />
+              ) : (
+                <Menu size={28} color="white" />
+              )}
+            </button>
+          )}
         </div>
       </nav>
 
-      {/* Mobile Overlay */}
-      {mobileOpen && (
+      {/* ── Mobile Overlay (tap to close) — only when open on mobile ── */}
+      {!isDesktop && mobileOpen && (
         <div
           onClick={() => setMobileOpen(false)}
           style={{
             position: "fixed",
             inset: 0,
-            background: "rgba(0,0,0,0.5)",
+            background: "rgba(0,0,0,0.55)",
             zIndex: 998,
           }}
         />
       )}
 
-      {/* Mobile Drawer */}
-      <div
-        style={{
-          position: "fixed",
-          top: 68,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: "#0c1426",
-          zIndex: 999,
-          display: "flex",
-          flexDirection: "column",
-          padding: "1.5rem 1.5rem 2rem",
-          overflowY: "auto",
-          transform: mobileOpen ? "translateX(0)" : "translateX(-100%)",
-          transition: "transform 350ms cubic-bezier(0.4, 0, 0.2, 1)",
-          pointerEvents: mobileOpen ? "auto" : "none",
-        }}
-        className="lg:hidden"
-      >
-        {/* Nav Links */}
-        <nav style={{ display: "flex", flexDirection: "column", gap: 4, flex: 1 }}>
-          {navLinks.map((link, i) => (
+      {/* ── Mobile Drawer — only rendered on mobile ── */}
+      {!isDesktop && (
+        <div
+          style={{
+            position: "fixed",
+            top: 68,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "#09090b",
+            zIndex: 999,
+            display: "flex",
+            flexDirection: "column",
+            padding: "1rem 1.5rem 2.5rem",
+            overflowY: "auto",
+            // Slide in/out via transform
+            transform: mobileOpen ? "translateX(0)" : "translateX(-100%)",
+            transition: "transform 320ms cubic-bezier(0.4, 0, 0.2, 1)",
+            // Visibility so keyboard & screen readers can't access when closed
+            visibility: mobileOpen ? "visible" : "hidden",
+          }}
+        >
+          {/* Nav links */}
+          <nav style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+            {navLinks.map((link, i) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                onClick={() => setMobileOpen(false)}
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: 24,
+                  color: location.pathname === link.href ? "#e5745a" : "rgba(255,255,255,0.9)",
+                  textDecoration: "none",
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                  padding: "16px 0",
+                  borderBottom:
+                    i < navLinks.length - 1
+                      ? "1px solid rgba(255,255,255,0.08)"
+                      : "none",
+                  display: "block",
+                  transition: "color 200ms",
+                }}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile CTA */}
+          <div style={{ marginTop: "2rem" }}>
             <Link
-              key={link.href}
-              to={link.href}
+              to="/contact"
               onClick={() => setMobileOpen(false)}
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: 22,
-                color: location.pathname === link.href ? "#e5745a" : "rgba(255,255,255,0.9)",
-                textDecoration: "none",
-                letterSpacing: "0.04em",
-                textTransform: "uppercase",
-                padding: "14px 0",
-                borderBottom: i < navLinks.length - 1
-                  ? "1px solid rgba(255,255,255,0.07)"
-                  : "none",
-                display: "block",
-                transition: "color 200ms",
-              }}
+              style={{ textDecoration: "none", display: "block" }}
             >
-              {link.label}
+              <Button
+                style={{
+                  background: "#e5745a",
+                  color: "white",
+                  borderRadius: 10,
+                  fontFamily: "var(--font-display)",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.08em",
+                  fontSize: 16,
+                  padding: "16px",
+                  border: "none",
+                  cursor: "pointer",
+                  width: "100%",
+                  minHeight: "auto",
+                }}
+              >
+                Partner With Us
+              </Button>
             </Link>
-          ))}
-        </nav>
-
-        {/* Mobile CTA */}
-        <div style={{ marginTop: "2rem" }}>
-          <Link
-            to="/contact"
-            onClick={() => setMobileOpen(false)}
-            style={{ textDecoration: "none", display: "block" }}
-          >
-            <Button
+            <p
               style={{
-                background: "#e5745a",
-                color: "white",
-                borderRadius: 10,
-                fontFamily: "var(--font-display)",
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-                fontSize: 16,
-                padding: "16px",
-                border: "none",
-                cursor: "pointer",
-                width: "100%",
+                fontFamily: "var(--font-body)",
+                fontSize: 12,
+                color: "rgba(255,255,255,0.3)",
+                textAlign: "center",
+                marginTop: 24,
               }}
             >
-              Partner With Us
-            </Button>
-          </Link>
-
-          {/* Footer info in mobile menu */}
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
-              textAlign: "center",
-              marginTop: 24,
-            }}
-          >
-            © 2026 Intelligensys & Strategies
-          </p>
+              © 2026 Intelligensys & Strategies
+            </p>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

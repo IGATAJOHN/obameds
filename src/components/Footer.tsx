@@ -3,7 +3,7 @@ import { Hexagon, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from "luci
 
 export function Footer() {
   return (
-    <footer style={{ background: "#0c1426", padding: "5em 0 2em" }}>
+    <footer style={{ background: "#09090b", padding: "5em 0 2em" }}>
       <div
         style={{
           maxWidth: 1400,

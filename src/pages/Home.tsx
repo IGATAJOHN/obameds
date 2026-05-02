@@ -118,7 +118,7 @@ export default function Home() {
           height: "100vh",
           overflow: "hidden",
           background:
-            "radial-gradient(ellipse at center, #0c1426 0%, #070d1a 100%)",
+            "radial-gradient(ellipse at center, #18181b 0%, #09090b 100%)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -444,7 +444,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section style={{ background: "#0c1426", padding: "6em 0" }}>
+      <section style={{ background: "#09090b", padding: "6em 0" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
           <ScrollSection>
             <div style={{ textAlign: "center", marginBottom: "3em" }}>
