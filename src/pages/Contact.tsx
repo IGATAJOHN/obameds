@@ -41,8 +41,8 @@ export default function Contact() {
     {
       icon: <Mail size={20} color="#1a9988" />,
       label: "Email",
-      value: "info@intelligensys.ng",
-      href: "mailto:info@intelligensys.ng",
+      value: "mail@intelligensys.org",
+      href: "mailto:mail@intelligensys.org",
     },
     {
       icon: <MapPin size={20} color="#1a9988" />,

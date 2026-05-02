@@ -69,7 +69,7 @@ const faqs = [
   {
     question: "How do I initiate a partnership with Intelligensys?",
     answer:
-      "You can reach us through the Contact page on our website, via email at info@intelligensys.ng, or through WhatsApp. Our team will engage you to understand your strategic objectives and propose a tailored service framework aligned to your specific needs.",
+      "You can reach us through the Contact page on our website, via email at mail@intelligensys.org, or through WhatsApp. Our team will engage you to understand your strategic objectives and propose a tailored service framework aligned to your specific needs.",
   },
   {
     question: "Is Intelligensys focused solely on Nigeria?",

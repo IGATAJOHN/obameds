@@ -82,7 +82,7 @@ export function Footer() {
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <Mail size={16} color="#1a9988" />
                 <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 14 }}>
-                  info@intelligensys.ng
+                  mail@intelligensys.org
                 </span>
               </div>
               <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
