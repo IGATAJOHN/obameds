@@ -68,7 +68,7 @@ export default function About() {
   return (
     <div style={{ paddingTop: 72 }}>
       {/* Hero */}
-      <div style={{ background: "#0c1426", padding: "5em 0 4em" }}>
+      <div style={{ background: "#09090b", padding: "5em 0 4em" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
           <h1
             style={{
@@ -125,7 +125,7 @@ export default function About() {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                    color: "#0c1426",
+                    color: "#09090b",
                     lineHeight: 1.2,
                     marginBottom: "0.8em",
                   }}
@@ -202,7 +202,7 @@ export default function About() {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: 28,
-                    color: "#0c1426",
+                    color: "#09090b",
                     marginBottom: 16,
                   }}
                 >
@@ -247,7 +247,7 @@ export default function About() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  color: "#0c1426",
+                  color: "#09090b",
                 }}
               >
                 Our Service Dimensions
@@ -290,7 +290,7 @@ export default function About() {
                     style={{
                       fontFamily: "var(--font-display)",
                       fontSize: 20,
-                      color: "#0c1426",
+                      color: "#09090b",
                       marginBottom: 12,
                     }}
                   >

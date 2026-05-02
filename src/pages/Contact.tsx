@@ -69,7 +69,7 @@ export default function Contact() {
   return (
     <div style={{ paddingTop: 72 }}>
       {/* Hero */}
-      <div style={{ background: "#0c1426", padding: "5em 0 4em" }}>
+      <div style={{ background: "#09090b", padding: "5em 0 4em" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
           <h1
             style={{
@@ -115,7 +115,7 @@ export default function Contact() {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: 24,
-                    color: "#0c1426",
+                    color: "#09090b",
                     marginBottom: "1.5em",
                   }}
                 >
@@ -166,7 +166,7 @@ export default function Contact() {
                           style={{
                             fontFamily: "var(--font-body)",
                             fontSize: 15,
-                            color: "#0c1426",
+                            color: "#09090b",
                           }}
                         >
                           {info.value}
@@ -216,7 +216,7 @@ export default function Contact() {
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                color: "#0c1426",
+                color: "#09090b",
                 marginBottom: "1.5em",
                 textAlign: "center",
               }}
@@ -253,7 +253,7 @@ export default function Contact() {
                       style={{
                         fontFamily: "var(--font-display)",
                         fontSize: 20,
-                        color: "#0c1426",
+                        color: "#09090b",
                       }}
                     >
                       {loc.name}

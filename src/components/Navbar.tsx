@@ -227,7 +227,7 @@ export function Navbar() {
             overflowY: "auto",
             // Slide in/out via transform
             transform: mobileOpen ? "translateX(0)" : "translateX(-100%)",
-            transition: "transform 320ms cubic-bezier(0.4, 0, 0.2, 1)",
+            transition: `transform 320ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0s ${mobileOpen ? "0s" : "320ms"}`,
             // Visibility so keyboard & screen readers can't access when closed
             visibility: mobileOpen ? "visible" : "hidden",
           }}

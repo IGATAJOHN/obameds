@@ -274,7 +274,7 @@ export default function Home() {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                    color: "#0c1426",
+                    color: "#09090b",
                     lineHeight: 1.2,
                     marginBottom: "0.5em",
                   }}
@@ -321,7 +321,7 @@ export default function Home() {
                       transition: "background 300ms",
                     }}
                     onMouseEnter={(e) => {
-                      (e.target as HTMLElement).style.background = "#0c1426";
+                      (e.target as HTMLElement).style.background = "#09090b";
                     }}
                     onMouseLeave={(e) => {
                       (e.target as HTMLElement).style.background = "#1a9988";
@@ -359,7 +359,7 @@ export default function Home() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  color: "#0c1426",
+                  color: "#09090b",
                 }}
               >
                 Multi-Dimensional Stability Solutions
@@ -405,7 +405,7 @@ export default function Home() {
                     style={{
                       fontFamily: "var(--font-display)",
                       fontSize: 20,
-                      color: "#0c1426",
+                      color: "#09090b",
                       marginBottom: 8,
                     }}
                   >
@@ -568,7 +568,7 @@ export default function Home() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  color: "#0c1426",
+                  color: "#09090b",
                 }}
               >
                 Trusted by Leaders
@@ -622,7 +622,7 @@ export default function Home() {
                         style={{
                           fontFamily: "var(--font-display)",
                           fontSize: 15,
-                          color: "#0c1426",
+                          color: "#09090b",
                         }}
                       >
                         {item.name}
@@ -674,7 +674,7 @@ export default function Home() {
                     style={{
                       fontFamily: "var(--font-display)",
                       fontSize: "clamp(2.5rem, 5vw, 4rem)",
-                      color: "#0c1426",
+                      color: "#09090b",
                       lineHeight: 1.1,
                       marginBottom: 8,
                     }}

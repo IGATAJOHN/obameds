@@ -113,7 +113,7 @@ function AccordionItem({
           style={{
             fontFamily: "var(--font-display)",
             fontSize: 17,
-            color: "#0c1426",
+            color: "#09090b",
             textTransform: "none",
             paddingRight: 16,
           }}
@@ -159,7 +159,7 @@ export default function FAQ() {
   return (
     <div style={{ paddingTop: 72 }}>
       {/* Hero */}
-      <div style={{ background: "#0c1426", padding: "5em 0 4em" }}>
+      <div style={{ background: "#09090b", padding: "5em 0 4em" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
           <h1
             style={{

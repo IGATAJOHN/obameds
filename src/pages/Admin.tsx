@@ -280,7 +280,7 @@ export default function Admin() {
         <aside
           style={{
             width: 260,
-            background: "#0c1426",
+            background: "#09090b",
             padding: "2em 0",
             flexShrink: 0,
           }}
@@ -378,7 +378,7 @@ export default function Admin() {
                   padding: "8px 16px",
                   borderRadius: 6,
                   border: "none",
-                  background: activeTab === tab.id ? "#0c1426" : "#f4f2ef",
+                  background: activeTab === tab.id ? "#09090b" : "#f4f2ef",
                   color: activeTab === tab.id ? "white" : "#2c2c2c",
                   fontFamily: "var(--font-body)",
                   fontSize: 13,
@@ -414,7 +414,7 @@ export default function Admin() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: 28,
-                  color: "#0c1426",
+                  color: "#09090b",
                   marginBottom: "1.5em",
                 }}
               >
@@ -432,7 +432,7 @@ export default function Admin() {
                   {
                     label: "Total Bookings",
                     value: bookingStats?.total ?? 0,
-                    color: "#0c1426",
+                    color: "#09090b",
                   },
                   {
                     label: "Pending",
@@ -499,7 +499,7 @@ export default function Admin() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: 20,
-                  color: "#0c1426",
+                  color: "#09090b",
                   marginBottom: "1em",
                 }}
               >
@@ -548,7 +548,7 @@ export default function Admin() {
                             padding: "12px 16px",
                             fontFamily: "var(--font-body)",
                             fontSize: 14,
-                            color: "#0c1426",
+                            color: "#09090b",
                           }}
                         >
                           {b.fullName}
@@ -641,7 +641,7 @@ export default function Admin() {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: 28,
-                    color: "#0c1426",
+                    color: "#09090b",
                   }}
                 >
                   Test Catalog
@@ -741,7 +741,7 @@ export default function Admin() {
                             padding: "12px 16px",
                             fontFamily: "var(--font-body)",
                             fontSize: 14,
-                            color: "#0c1426",
+                            color: "#09090b",
                             fontWeight: 500,
                           }}
                         >
@@ -855,7 +855,7 @@ export default function Admin() {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: 28,
-                    color: "#0c1426",
+                    color: "#09090b",
                   }}
                 >
                   Bookings
@@ -945,7 +945,7 @@ export default function Admin() {
                               padding: "12px 16px",
                               fontFamily: "var(--font-body)",
                               fontSize: 14,
-                              color: "#0c1426",
+                              color: "#09090b",
                               fontWeight: 500,
                             }}
                           >
@@ -1062,7 +1062,7 @@ export default function Admin() {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: 28,
-                    color: "#0c1426",
+                    color: "#09090b",
                   }}
                 >
                   Testimonials
@@ -1120,7 +1120,7 @@ export default function Admin() {
                           style={{
                             fontFamily: "var(--font-display)",
                             fontSize: 16,
-                            color: "#0c1426",
+                            color: "#09090b",
                           }}
                         >
                           {t.name}
@@ -1198,7 +1198,7 @@ export default function Admin() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: 28,
-                  color: "#0c1426",
+                  color: "#09090b",
                   marginBottom: "1.5em",
                 }}
               >
@@ -1355,7 +1355,7 @@ export default function Admin() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: 22,
-                  color: "#0c1426",
+                  color: "#09090b",
                 }}
               >
                 {editingTest ? "Edit Test" : "Add New Test"}
@@ -1535,7 +1535,7 @@ export default function Admin() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: 22,
-                  color: "#0c1426",
+                  color: "#09090b",
                 }}
               >
                 {editingTestimonial ? "Edit Testimonial" : "Add Testimonial"}

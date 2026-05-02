@@ -112,7 +112,7 @@ export default function Book() {
             style={{
               fontFamily: "var(--font-display)",
               fontSize: 32,
-              color: "#0c1426",
+              color: "#09090b",
               marginBottom: 16,
             }}
           >
@@ -156,7 +156,7 @@ export default function Book() {
   return (
     <div style={{ paddingTop: 72, minHeight: "100vh", background: "#f4f2ef" }}>
       {/* Header */}
-      <div style={{ background: "#0c1426", padding: "4em 0 3em" }}>
+      <div style={{ background: "#09090b", padding: "4em 0 3em" }}>
         <div
           style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}
         >
@@ -316,7 +316,7 @@ export default function Book() {
                     style={{
                       fontFamily: "var(--font-display)",
                       fontSize: 18,
-                      color: "#0c1426",
+                      color: "#09090b",
                       marginBottom: 8,
                       textTransform: "none",
                     }}
@@ -378,7 +378,7 @@ export default function Book() {
                       setFormStep("form");
                     }}
                     style={{
-                      background: "#0c1426",
+                      background: "#09090b",
                       color: "white",
                       borderRadius: 8,
                       fontFamily: "var(--font-display)",
@@ -394,7 +394,7 @@ export default function Book() {
                       (e.target as HTMLElement).style.background = "#1a9988";
                     }}
                     onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.background = "#0c1426";
+                      (e.target as HTMLElement).style.background = "#09090b";
                     }}
                   >
                     Book Now
@@ -475,7 +475,7 @@ export default function Book() {
                     style={{
                       fontFamily: "var(--font-display)",
                       fontSize: 18,
-                      color: "#0c1426",
+                      color: "#09090b",
                       textTransform: "none",
                     }}
                   >

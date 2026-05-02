@@ -111,7 +111,7 @@ export default function Services() {
   return (
     <div style={{ paddingTop: 72 }}>
       {/* Hero */}
-      <div style={{ background: "#0c1426", padding: "5em 0 4em" }}>
+      <div style={{ background: "#09090b", padding: "5em 0 4em" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
           <span
             style={{
@@ -198,7 +198,7 @@ export default function Services() {
                       style={{
                         fontFamily: "var(--font-display)",
                         fontSize: "clamp(1.4rem, 2.5vw, 1.8rem)",
-                        color: "#0c1426",
+                        color: "#09090b",
                         lineHeight: 1.2,
                         marginBottom: "1em",
                       }}
@@ -228,7 +228,7 @@ export default function Services() {
                       style={{
                         fontFamily: "var(--font-display)",
                         fontSize: 16,
-                        color: "#0c1426",
+                        color: "#09090b",
                         marginBottom: "1.2em",
                         letterSpacing: "0.04em",
                         textTransform: "uppercase",
@@ -279,7 +279,7 @@ export default function Services() {
       </div>
 
       {/* CTA */}
-      <div style={{ background: "#0c1426", padding: "5em 0" }}>
+      <div style={{ background: "#09090b", padding: "5em 0" }}>
         <div
           style={{
             maxWidth: 1400,
