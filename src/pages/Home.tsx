@@ -170,31 +170,7 @@ export default function Home() {
               flexWrap: "wrap",
             }}
           >
-            <Link to="/contact">
-              <Button
-                style={{
-                  background: "#e5745a",
-                  color: "white",
-                  borderRadius: 50,
-                  fontFamily: "var(--font-display)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  fontSize: 15,
-                  padding: "14px 36px",
-                  border: "none",
-                  cursor: "pointer",
-                  transition: "all 300ms",
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.transform = "scale(1.05)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.transform = "scale(1)";
-                }}
-              >
-                Partner With Us
-              </Button>
-            </Link>
+
             <Link to="/services">
               <Button
                 variant="outline"
@@ -294,17 +270,7 @@ export default function Home() {
                 >
                   We provide the advanced intelligence frameworks and data-driven systems required to support Nigeria’s strategic objectives and economic stability. We serve as a specialized partner to government institutions and private-sector leaders, offering the technical clarity required to protect assets, stabilize environments, and facilitate growth.
                 </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: 16,
-                    color: "#2c2c2c",
-                    lineHeight: 1.7,
-                    marginBottom: "1.5em",
-                  }}
-                >
-                  Established in 2006 as Quorum Technologies, we have built a legacy of transforming complex security variables into actionable strategic services. We enable our partners to navigate the multi-dimensional challenges of the modern era with precision and technical confidence.
-                </p>
+
                 <Link to="/about">
                   <Button
                     style={{
@@ -545,115 +511,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section style={{ background: "white", padding: "6em 0" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2.22em" }}>
-          <ScrollSection>
-            <div style={{ textAlign: "center", marginBottom: "3em" }}>
-              <span
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: 14,
-                  fontWeight: 600,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  color: "#2c2c2c",
-                  marginBottom: 12,
-                  display: "block",
-                }}
-              >
-                Testimonials
-              </span>
-              <h2
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  color: "#09090b",
-                }}
-              >
-                Trusted by Leaders
-              </h2>
-            </div>
-          </ScrollSection>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
-              gap: "1.5em",
-            }}
-          >
-            {(testimonials ?? []).slice(0, 3).map((item, i) => (
-              <ScrollSection key={i}>
-                <div
-                  style={{
-                    background: "#f4f2ef",
-                    borderRadius: 16,
-                    padding: "2em",
-                    position: "relative",
-                  }}
-                >
-                  <Quote
-                    size={32}
-                    color="#1a9988"
-                    style={{ marginBottom: 12, opacity: 0.5 }}
-                  />
-                  <p
-                    style={{
-                      fontFamily: "var(--font-body)",
-                      fontSize: 15,
-                      color: "#2c2c2c",
-                      lineHeight: 1.7,
-                      marginBottom: 20,
-                      fontStyle: "italic",
-                    }}
-                  >
-                    {item.quote}
-                  </p>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <div>
-                      <p
-                        style={{
-                          fontFamily: "var(--font-display)",
-                          fontSize: 15,
-                          color: "#09090b",
-                        }}
-                      >
-                        {item.name}
-                      </p>
-                      <p
-                        style={{
-                          fontFamily: "var(--font-body)",
-                          fontSize: 13,
-                          color: "#2c2c2c",
-                        }}
-                      >
-                        {item.location}
-                      </p>
-                    </div>
-                    <div style={{ display: "flex", gap: 4 }}>
-                      {Array.from({ length: item.rating }).map((_, j) => (
-                        <Star
-                          key={j}
-                          size={16}
-                          color="#e5745a"
-                          fill="#e5745a"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </ScrollSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Statistics */}
       <section style={{ background: "#f4f2ef", padding: "5em 0" }}>
@@ -723,7 +581,7 @@ export default function Home() {
                   marginBottom: "1.5em",
                 }}
               >
-                Partner with us for advanced intelligence frameworks and data-driven stability solutions.
+                Contact us for advanced intelligence frameworks and data-driven stability solutions.
               </p>
               <Link to="/contact" style={{ textDecoration: "none" }}>
                 <Button

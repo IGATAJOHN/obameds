@@ -140,32 +140,7 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link to="/contact" style={{ textDecoration: "none" }}>
-                <Button
-                  style={{
-                    background: "#e5745a",
-                    color: "white",
-                    borderRadius: 8,
-                    fontFamily: "var(--font-display)",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.08em",
-                    fontSize: 13,
-                    padding: "10px 22px",
-                    border: "none",
-                    cursor: "pointer",
-                    transition: "background 300ms",
-                    whiteSpace: "nowrap",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.target as HTMLElement).style.background = "#2c2c2c";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.target as HTMLElement).style.background = "#e5745a";
-                  }}
-                >
-                  Partner With Us
-                </Button>
-              </Link>
+
             </div>
           )}
 
@@ -262,30 +237,7 @@ export function Navbar() {
 
           {/* Mobile CTA */}
           <div style={{ marginTop: "2rem" }}>
-            <Link
-              to="/contact"
-              onClick={() => setMobileOpen(false)}
-              style={{ textDecoration: "none", display: "block" }}
-            >
-              <Button
-                style={{
-                  background: "#e5745a",
-                  color: "white",
-                  borderRadius: 10,
-                  fontFamily: "var(--font-display)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  fontSize: 16,
-                  padding: "16px",
-                  border: "none",
-                  cursor: "pointer",
-                  width: "100%",
-                  minHeight: "auto",
-                }}
-              >
-                Partner With Us
-              </Button>
-            </Link>
+
             <p
               style={{
                 fontFamily: "var(--font-body)",
