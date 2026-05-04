@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Book from "./pages/Book";
 import Services from "./pages/Services";
 import About from "./pages/About";
-import FAQ from "./pages/FAQ";
+
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
@@ -60,14 +60,7 @@ export default function App() {
             </Layout>
           }
         />
-        <Route
-          path="/faq"
-          element={
-            <Layout>
-              <FAQ />
-            </Layout>
-          }
-        />
+
         <Route
           path="/contact"
           element={

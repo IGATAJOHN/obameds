@@ -112,7 +112,7 @@ export function Footer() {
               {[
                 { label: "Services", href: "/services" },
                 { label: "About Us", href: "/about" },
-                { label: "FAQ", href: "/faq" },
+
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
                 link.href.startsWith("http") ? (

@@ -125,9 +125,10 @@ export default function About() {
           <ScrollSection>
             <div
               style={{
-                maxWidth: 800,
-                margin: "0 auto",
-                textAlign: "center",
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "4em",
+                alignItems: "center",
               }}
             >
               <div>
@@ -154,7 +155,23 @@ export default function About() {
                   Established in 2006, we have built a legacy of transforming complex security variables into actionable strategic services. We enable our partners to navigate the multi-dimensional challenges of the modern era with precision and technical confidence.
                 </p>
               </div>
-
+              <div
+                style={{
+                  borderRadius: 16,
+                  overflow: "hidden",
+                  boxShadow: "0 8px 40px rgba(0,0,0,0.1)",
+                }}
+              >
+                <img
+                  src="/images/tech-security.png"
+                  alt="Strategic Tech Architecture"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
+              </div>
             </div>
           </ScrollSection>
         </div>
