@@ -47,7 +47,7 @@ export default function Contact() {
     {
       icon: <MapPin size={20} color="#1a9988" />,
       label: "Address",
-      value: "No 11 Ado-Ekiti Cl, Municipal, Abuja 900001, FCT",
+      value: "No 11 Ado-Ekiti Close, Off Emeka Anyaoku Street, Area 11, Garki, Abuja 900247, FCT",
       href: "#",
     },
     {
@@ -61,7 +61,7 @@ export default function Contact() {
   const locations = [
     {
       name: "Headquarters",
-      address: "No 11 Ado-Ekiti Cl, Municipal, Abuja 900001, Federal Capital Territory",
+      address: "No 11 Ado-Ekiti Close, Off Emeka Anyaoku Street, Area 11, Garki, Abuja 900247, FCT",
       phone: "+234 803 330 4891",
     }
   ];
@@ -290,7 +290,7 @@ export default function Contact() {
       {/* Map Embed */}
       <section style={{ height: 400, background: "#e0e0e0" }}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8!2d7.3956!3d9.0579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDMnMjguNCJOIDfCsDIzJzQ0LjIiRQ!5e0!3m2!1sen!2sng!4v1600000000000!5m2!1sen!2sng"
+          src="https://maps.google.com/maps?q=No%2011%20Ado-Ekiti%20Close%2C%20Area%2011%2C%20Garki%2C%20Abuja&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}

@@ -88,8 +88,9 @@ export function Footer() {
               <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
                 <MapPin size={16} color="#1a9988" style={{ marginTop: 2 }} />
                 <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 14 }}>
-                  No 11 Ado-Ekiti Cl, Municipal,<br />
-                  Abuja 900001, FCT
+                  No 11 Ado-Ekiti Close,<br />
+                  Off Emeka Anyaoku Street,<br />
+                  Area 11, Garki, Abuja 900247, FCT
                 </span>
               </div>
             </div>
