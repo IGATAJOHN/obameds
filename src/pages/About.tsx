@@ -104,7 +104,7 @@ export default function About() {
               marginBottom: 16,
             }}
           >
-            About Us: The Architecture of National Resilience
+            About Us
           </h1>
           <p
             style={{
