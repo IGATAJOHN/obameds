@@ -34,33 +34,58 @@ function ScrollSection({
 const services = [
   {
     icon: <ShieldAlert size={28} color="#1a9988" />,
-    title: "Cyber & Technical Security Services",
-    description:
-      "We provide specialized services for Science and Technology Security. Our focus includes Cybersecurity for critical infrastructure and the rigorous auditing of AI systems, ensuring that Nigeria’s digital frontier remains a secure platform for innovation.",
+    title: "1. Cyber & Technical Security Services",
+    description: (
+      <>
+        <strong>Focus: Science and Technology Security | Cybersecurity</strong>
+        <br />
+        We provide specialized services to secure the foundations of the digital economy. Our focus includes the rigorous auditing of critical infrastructure and autonomous systems, ensuring that Nigeria’s technological frontier remains resilient against asymmetric threats.
+      </>
+    ),
   },
   {
     icon: <Landmark size={28} color="#e5745a" />,
-    title: "Economic & Financial Integrity Services",
-    description:
-      "We deliver the frameworks required to enhance Financial Security and Economic Security. By offering services that neutralize illicit financial flows and organized crime, we help foster an environment where prosperity and investment can thrive.",
+    title: "2. Economic & Financial Integrity Services",
+    description: (
+      <>
+        <strong>Focus: Economic Security | Financial Security</strong>
+        <br />
+        We deliver the strategic frameworks required to enhance national fiscal health. By offering services that analyze and neutralize the drivers of illicit financial flows, we help foster an environment where national prosperity and international investment can thrive.
+      </>
+    ),
   },
   {
     icon: <Globe size={28} color="#4f8298" />,
-    title: "Trade & Border Facilitation Services",
-    description:
-      "We design the systems that underpin Border Security. Our services focus on the technological enablement of secure trade corridors, ensuring that borders function as efficient gateways for global commerce while mitigating transnational threats.",
+    title: "3. Trade & Border Facilitation Services",
+    description: (
+      <>
+        <strong>Focus: Border Security | Transnational Security</strong>
+        <br />
+        We design the systems that underpin secure trade. Our services focus on the technological enablement of secure trade corridors, ensuring that borders function as efficient gateways for global commerce while mitigating transnational threats.
+      </>
+    ),
   },
   {
     icon: <Leaf size={28} color="#1a9988" />,
-    title: "Resource & Food Sustainability Services",
-    description:
-      "Utilizing Geospatial Intelligence (GEOINT), we provide high-level monitoring for Food Security, Resource Security, and Ecological Security. We help our partners protect agricultural hubs and mineral extraction sites through advanced data modeling and risk assessment.",
+    title: "4. Resource & Food Sustainability Services",
+    description: (
+      <>
+        <strong>Focus: Food Security | Resource Security | Ecological Security</strong>
+        <br />
+        Utilizing Geospatial Intelligence (GEOINT), we provide high-level monitoring for agricultural hubs and mineral extraction sites. We help our partners protect the national production base through advanced data modeling and ecological risk assessment.
+      </>
+    ),
   },
   {
     icon: <Users size={28} color="#e5745a" />,
-    title: "Societal & Human Stability Services",
-    description:
-      "We provide the intellectual and data-rich frameworks necessary to enhance Human Security and Societal Security. Our services focus on strengthening institutional integrity and safeguarding Cultural Security, ensuring the long-term resilience of the social fabric.",
+    title: "5. Societal & Human Stability Services",
+    description: (
+      <>
+        <strong>Focus: Human Security | Societal Security | Cultural Security</strong>
+        <br />
+        We provide the intellectual and data-rich frameworks necessary to enhance the social contract. Our services focus on strengthening institutional integrity and safeguarding the social fabric, ensuring the long-term resilience of the Federation.
+      </>
+    ),
   },
 ];
 
@@ -78,18 +103,18 @@ export default function About() {
               marginBottom: 16,
             }}
           >
-            About Intelligensys & Strategies
+            About Us: The Architecture of National Resilience
           </h1>
           <p
             style={{
               fontFamily: "var(--font-body)",
               fontSize: 18,
               color: "rgba(255,255,255,0.7)",
-              maxWidth: 700,
+              maxWidth: 800,
               lineHeight: 1.7,
             }}
           >
-            Intelligensys & Strategies is a high-performance technology and strategic services firm. We provide the advanced intelligence frameworks and data-driven systems required to support Nigeria’s strategic objectives and economic stability.
+            Intelligensys & Strategies is a high-performance technology and strategic services firm. We provide the advanced intelligence frameworks and data-driven systems required to support Nigeria’s strategic objectives and economic stability. We serve as a specialized partner to government institutions and private-sector leaders, offering the technical clarity required to protect assets, stabilize environments, and facilitate growth.
           </p>
         </div>
       </div>
@@ -106,20 +131,6 @@ export default function About() {
               }}
             >
               <div>
-                <span
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: 14,
-                    fontWeight: 600,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: "#1a9988",
-                    marginBottom: 16,
-                    display: "block",
-                  }}
-                >
-                  Our Legacy
-                </span>
                 <h2
                   style={{
                     fontFamily: "var(--font-display)",
@@ -129,7 +140,7 @@ export default function About() {
                     marginBottom: "0.8em",
                   }}
                 >
-                  Established in 2006
+                  Our Legacy
                 </h2>
                 <p
                   style={{
@@ -140,18 +151,7 @@ export default function About() {
                     marginBottom: "1.2em",
                   }}
                 >
-                  Established in 2006 as Quorum Technologies, we have built a legacy of transforming complex security variables into actionable strategic services. We enable our partners to navigate the multi-dimensional challenges of the modern era with precision and technical confidence.
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: 16,
-                    color: "#2c2c2c",
-                    lineHeight: 1.7,
-                    marginBottom: "1.2em",
-                  }}
-                >
-                  We serve as a specialized partner to government institutions and private-sector leaders, offering the technical clarity required to protect assets, stabilize environments, and facilitate growth.
+                  Established in 2006, we have built a legacy of transforming complex security variables into actionable strategic services. We enable our partners to navigate the multi-dimensional challenges of the modern era with precision and technical confidence.
                 </p>
               </div>
 
@@ -235,6 +235,18 @@ export default function About() {
               >
                 Our Service Dimensions
               </h2>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: 16,
+                  color: "#2c2c2c",
+                  maxWidth: 800,
+                  margin: "1em auto 0",
+                  lineHeight: 1.6,
+                }}
+              >
+                We categorize our expertise into five operational pillars that encompass the 11 essential branches of modern security.
+              </p>
             </div>
           </ScrollSection>
 
