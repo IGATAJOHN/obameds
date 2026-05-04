@@ -342,23 +342,59 @@ export default function About() {
                 boxShadow: "0 4px 30px rgba(0,0,0,0.03)",
               }}
             >
-              <div
-                style={{
-                  borderRadius: 16,
-                  overflow: "hidden",
-                  boxShadow: "0 8px 40px rgba(0,0,0,0.1)",
-                }}
-              >
-                <img
-                  src="/images/ceo.jpg"
-                  alt="Umar Yakubu, Ph.D. - CEO"
+              <div>
+                <div
                   style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                    objectFit: "cover",
+                    borderRadius: 16,
+                    overflow: "hidden",
+                    boxShadow: "0 8px 40px rgba(0,0,0,0.1)",
+                    marginBottom: 20,
                   }}
-                />
+                >
+                  <img
+                    src="/images/ceo.jpg"
+                    alt="Umar Yakubu, Ph.D. - CEO"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div style={{ paddingLeft: 8 }}>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: 20,
+                      color: "#09090b",
+                      marginBottom: 4,
+                    }}
+                  >
+                    Umar Yakubu, Ph.D.
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: 14,
+                      color: "#1a9988",
+                      fontWeight: 600,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    Chief Executive Officer
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: 13,
+                      color: "#666",
+                    }}
+                  >
+                    Intelligensys & Strategies
+                  </p>
+                </div>
               </div>
 
               <div style={{ position: "relative" }}>
@@ -434,39 +470,7 @@ export default function About() {
                     We invite you to explore our architecture of resilience as we work together to secure the national interest and engineer a prosperous, stable, and investment-ready future for all.
                   </p>
 
-                  <div style={{ marginTop: "2.5em" }}>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        fontSize: 20,
-                        color: "#09090b",
-                        marginBottom: 4,
-                      }}
-                    >
-                      Umar Yakubu, Ph.D.
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-body)",
-                        fontSize: 14,
-                        color: "#1a9988",
-                        fontWeight: 600,
-                        textTransform: "uppercase",
-                        letterSpacing: "0.05em",
-                      }}
-                    >
-                      Chief Executive Officer
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-body)",
-                        fontSize: 13,
-                        color: "#666",
-                      }}
-                    >
-                      Intelligensys & Strategies
-                    </p>
-                  </div>
+
                 </div>
               </div>
             </div>
