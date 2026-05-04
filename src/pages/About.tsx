@@ -6,6 +6,7 @@ import {
   Leaf,
   Users,
   Target,
+  Quote,
 } from "lucide-react";
 
 function ScrollSection({
