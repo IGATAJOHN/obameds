@@ -324,6 +324,131 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* CEO Statement */}
+      <section style={{ background: "#f4f2ef", padding: "6em 0" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 2.22em" }}>
+          <ScrollSection>
+            <div
+              style={{
+                background: "white",
+                borderRadius: 24,
+                padding: "4em 3em",
+                boxShadow: "0 4px 30px rgba(0,0,0,0.03)",
+                position: "relative",
+              }}
+            >
+              <Quote
+                size={48}
+                color="#1a9988"
+                style={{
+                  position: "absolute",
+                  top: "2em",
+                  left: "2em",
+                  opacity: 0.1,
+                }}
+              />
+              <div style={{ textAlign: "center", marginBottom: "3em" }}>
+                <span
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: 14,
+                    fontWeight: 600,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "#1a9988",
+                    marginBottom: 12,
+                    display: "block",
+                  }}
+                >
+                  Perspective
+                </span>
+                <h2
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+                    color: "#09090b",
+                  }}
+                >
+                  CEO’S STATEMENT
+                </h2>
+              </div>
+
+              <div
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: 17,
+                  color: "#2c2c2c",
+                  lineHeight: 1.8,
+                  textAlign: "justify",
+                }}
+              >
+                <p style={{ marginBottom: "1.5em" }}>
+                  At Intelligensys & Strategies, we believe that the stability of a nation is no longer defined solely by its physical borders, but by the resilience of its interconnected systems.
+                </p>
+                <p style={{ marginBottom: "1.5em" }}>
+                  In an era where asymmetric threats can emerge from the digital frontier, the financial markets, or ecological shifts, traditional security models are no longer sufficient.
+                </p>
+                <p style={{ marginBottom: "1.5em" }}>
+                  Since our founding in 2006, we have transitioned from a technology-focused firm into a specialized vanguard for National Security Architecture.
+                </p>
+                <p style={{ marginBottom: "1.5em" }}>
+                  Our mission is clear: to provide the strategic frameworks and technical intelligence that empower both government institutions and private-sector leaders to navigate a multi-dimensional world with precision.
+                </p>
+                <p style={{ marginBottom: "1.5em" }}>
+                  We recognize that the private sector is the engine of Nigeria’s growth. However, growth requires certainty. Our work is centered on 11 Critical Dimensions, ranging from Science and Technology Security and Cybersecurity to Food, Resource, and Ecological Security.
+                </p>
+                <p style={{ marginBottom: "1.5em" }}>
+                  By addressing the Security-Development Nexus, we provide the private sector with the Risk Intelligence necessary to protect capital, secure supply chains, and stabilize the environments in which they operate.
+                </p>
+                <p style={{ marginBottom: "1.5em" }}>
+                  Whether we are architecting Trade and Border Facilitation systems to reduce the costs on logistics for exporters, or deploying Geospatial Intelligence to safeguard agricultural and mineral investments, our focus remains on Institutional Integrity and Economic Stability. We bridge the gap between national policy and corporate resilience, transforming complex security variables into manageable business strategies.
+                </p>
+                <p style={{ marginBottom: "1.5em" }}>
+                  Nigeria stands at a pivotal moment. As the nation targets aggressive growth in the non-oil sector and a digital transformation of its economy, the need for a robust, multi-dimensional security doctrine has never been greater. Intelligensys & Strategies is proud to be the technical engine behind that doctrine, ensuring that while our social fabric remains protected, our private enterprises have the security framework required to compete globally.
+                </p>
+                <p style={{ marginBottom: "2.5em" }}>
+                  We invite you to explore our architecture of resilience as we work together to secure the national interest and engineer a prosperous, stable, and investment-ready future for all.
+                </p>
+
+                <div style={{ textAlign: "right", marginTop: "3em" }}>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: 20,
+                      color: "#09090b",
+                      marginBottom: 4,
+                    }}
+                  >
+                    Umar Yakubu, Ph.D.
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: 14,
+                      color: "#1a9988",
+                      fontWeight: 600,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    Chief Executive Officer
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: 13,
+                      color: "#666",
+                    }}
+                  >
+                    Intelligensys & Strategies
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ScrollSection>
+        </div>
+      </section>
     </div>
   );
 }
