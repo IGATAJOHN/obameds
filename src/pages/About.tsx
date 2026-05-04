@@ -100,10 +100,9 @@ export default function About() {
           <ScrollSection>
             <div
               style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: "4em",
-                alignItems: "center",
+                maxWidth: 800,
+                margin: "0 auto",
+                textAlign: "center",
               }}
             >
               <div>
@@ -155,23 +154,7 @@ export default function About() {
                   We serve as a specialized partner to government institutions and private-sector leaders, offering the technical clarity required to protect assets, stabilize environments, and facilitate growth.
                 </p>
               </div>
-              <div
-                style={{
-                  borderRadius: 16,
-                  overflow: "hidden",
-                  boxShadow: "0 8px 40px rgba(0,0,0,0.1)",
-                }}
-              >
-                <img
-                  src="/images/about-team.jpg"
-                  alt="Intelligensys & Strategies Team"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                  }}
-                />
-              </div>
+
             </div>
           </ScrollSection>
         </div>
