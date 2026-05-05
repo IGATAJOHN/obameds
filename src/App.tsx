@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Book from "./pages/Book";
 import Services from "./pages/Services";
 import About from "./pages/About";
+import Privacy from "./pages/Privacy";
+
 
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
@@ -57,6 +59,14 @@ export default function App() {
           element={
             <Layout>
               <About />
+            </Layout>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <Layout>
+              <Privacy />
             </Layout>
           }
         />
