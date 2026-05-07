@@ -167,22 +167,20 @@ export function Footer() {
               Legal
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {["Privacy Policy", "Terms of Service"].map((label) => (
-                <Link
-                  key={label}
-                  to="/privacy"
-                  className="link-underline"
-                  style={{
-                    color: "rgba(255,255,255,0.7)",
-                    fontSize: 14,
-                    textDecoration: "none",
-                    fontFamily: "var(--font-body)",
-                    transition: "color 300ms",
-                  }}
-                >
-                  {label}
-                </Link>
-              ))}
+              <Link
+                to="/privacy"
+                className="link-underline"
+                style={{
+                  color: "rgba(255,255,255,0.7)",
+                  fontSize: 14,
+                  textDecoration: "none",
+                  fontFamily: "var(--font-body)",
+                  transition: "color 300ms",
+                  textTransform: "uppercase",
+                }}
+              >
+                TERMS OF SERVICE & PRIVACY POLICY
+              </Link>
             </div>
           </div>
         </div>
